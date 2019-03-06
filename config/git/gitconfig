@@ -68,7 +68,7 @@
 
 [core]
    # Use custom `.gitignore` and `.gitattributes`
-   excludesfile = ~/.gitignore
+	excludesfile = /Users/raphaelgerber/.gitignore_global
    #attributesfile = ~/.gitattributes
    #whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
@@ -77,8 +77,10 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/raphaelgerber/.stCommitMsg
