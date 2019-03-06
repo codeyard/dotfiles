@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+TODO: BUG: $1
+]]></content>
+	<tabTrigger>bug</tabTrigger>
+	<description>Task ToDo Bug</description>
+</snippet>

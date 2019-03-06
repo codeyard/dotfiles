@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+```$1
+$2
+```
+$0
+]]></content>
+	<tabTrigger>mcb</tabTrigger>
+	<description>Markdown Code Block</description>
+	<!-- <scope>text.html.markdown</scope> -->
+</snippet>

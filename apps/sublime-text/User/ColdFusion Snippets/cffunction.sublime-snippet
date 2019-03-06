@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+	<cffunction name="$1" returntype="$2" access="$3" output="false"
+		hint="$4">
+		$5
+	</cffunction>
+]]></content>
+	<tabTrigger>cffunc</tabTrigger>
+	<description>ColdFusion cffunction</description>
+</snippet>

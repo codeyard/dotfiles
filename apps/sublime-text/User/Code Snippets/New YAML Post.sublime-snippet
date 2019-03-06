@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+---
+title: $1
+description: $2
+tags: $3
+comments: true
+layout: post
+date: ${4:yyyy-MM-dd HH:mm:ss, yadate}
+updated: ${4:yyyy-MM-dd HH:mm:ss, yadate}
+---
+
+$5
+]]></content>
+	<tabTrigger>yapost</tabTrigger>
+	<description>New Jekyll / YAML Post</description>
+</snippet>

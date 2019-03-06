@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<cflog text="$1" type="${2:error, information, warning, fatal}" application="true" file="$3" />$4
+]]></content>
+	<tabTrigger>cflog</tabTrigger>
+	<description>ColdFusion cflog</description>
+</snippet>

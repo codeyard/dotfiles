@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\u00C4
+]]></content>
+	<tabTrigger>Auml</tabTrigger>
+	<description>Resource Bundle Ä</description>
+</snippet>

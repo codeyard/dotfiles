@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+Trim($1)$2
+]]></content>
+	<tabTrigger>trim</tabTrigger>
+	<description>ColdFusion Trim</description>
+</snippet>

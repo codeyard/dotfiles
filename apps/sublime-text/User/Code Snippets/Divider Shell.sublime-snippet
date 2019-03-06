@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+# ---------------------------------------------------------------------
+# $1
+# ---------------------------------------------------------------------
+$2
+]]></content>
+	<tabTrigger>shdivider</tabTrigger>
+	<description>Divider Comment Shell Bash</description>
+</snippet>

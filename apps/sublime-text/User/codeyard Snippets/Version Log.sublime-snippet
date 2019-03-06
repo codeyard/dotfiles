@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+v ${1:Version} ${2:yyyy-mm-dd, dstamp} rgerber ${3:Description}
+]]></content>
+	<tabTrigger>version</tabTrigger>
+	<description>Version Log rgerber</description>
+</snippet>

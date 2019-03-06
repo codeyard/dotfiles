@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<input type="text" name="$1" value="$2">$3
+]]></content>
+	<tabTrigger>inptext</tabTrigger>
+	<description>HTML Input Text</description>
+</snippet>

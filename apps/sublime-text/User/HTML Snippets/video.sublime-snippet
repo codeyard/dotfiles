@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<video width="$1" height="$2" controls="controls">
+	<source src="${3:video.mp4}" type="video/mp4" />
+	<source src="${4:video.ogg}" type="video/ogg" />
+	Your browser does not support the video tag.
+</video>$5
+]]></content>
+	<tabTrigger>video</tabTrigger>
+	<description>HTML Video</description>
+</snippet>

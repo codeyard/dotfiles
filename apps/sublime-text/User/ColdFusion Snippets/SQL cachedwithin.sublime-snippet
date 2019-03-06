@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+cachedwithin="#CreateTimeSpan(${1:Days},${2:Hours},${3:Minutes},${4:Seconds})#"$0
+]]></content>
+	<tabTrigger>cached</tabTrigger>
+	<description>SQL cfquery cachedwithin</description>
+</snippet>

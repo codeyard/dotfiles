@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+for (${1:Index}=1; ${1:Index} ${2:Condition}; ${1:Index}=${1:Index}+1) {
+	$3
+}
+]]></content>
+	<tabTrigger>loop</tabTrigger>
+	<description>ColdFusion cfscript Loop</description>
+</snippet>

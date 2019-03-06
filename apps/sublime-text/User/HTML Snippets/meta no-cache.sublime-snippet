@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="pragma" content="no-proxy" />
+<meta http-equiv="expires" content="0" />$1
+]]></content>
+	<tabTrigger>nocache</tabTrigger>
+	<description>HTML Meta No Cache</description>
+</snippet>

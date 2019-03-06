@@ -1,0 +1,167 @@
+#!/bin/bash
+
+# Reload Shell
+alias reload='source ~/.bash_profile && echo "Bash profile reloaded!"'
+
+# Add bash aliases
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
+# Add bash functions
+if [ -f ~/.bash_functions ]; then
+    source ~/.bash_functions
+fi
+
+
+# ---------------------------------------------------------------------
+# Git Integration
+# ---------------------------------------------------------------------
+source ~/.git-completion.bash
+source ~/.git-prompt.sh
+
+GIT_PS1_SHOWDIRTYSTATE=true # shows unstaged (*) and staged (+) changes
+GIT_PS1_SHOWSTASHSTATE=true # shows '$' if something is stashed
+GIT_PS1_SHOWUNTRACKEDFILES=true # shows '%' if there are untracked files
+GIT_PS1_SHOWUPSTREAM='auto' # '<' behind, '>' ahead, '<>' diverged, '=' no difference in upstream
+GIT_PS1_DESCRIBE_STYLE='contains'
+GIT_PS1_SHOWCOLORHINTS=true
+eval "$(hub alias -s)" # Add 'hub' command to PATH
+
+
+
+
+# ---------------------------------------------------------------------
+# Colors
+# ---------------------------------------------------------------------
+# Base16 Shell
+# BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
+# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+
+black="\[\033[0;30m\]"
+blue="\[\033[0;34m\]"
+cyan="\[\033[0;36m\]"
+green="\[\033[0;32m\]"
+orange="\[\033[0;33m\]"
+purple="\[\033[0;35m\]"
+red="\[\033[0;31m\]"
+white="\[\033[0;37m\]"
+yellow="\[\033[0;33m\]"
+reset="\[\033[0m\]"
+
+export black
+export blue
+export cyan
+export green
+export orange
+export purple
+export red
+export white
+export yellow
+export reset
+
+export LS_OPTIONS='--color=auto'
+export CLICOLOR='true'
+export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
+
+
+
+
+# ---------------------------------------------------------------------
+# Prompt
+# ---------------------------------------------------------------------
+export PS1=$white'\n$(pwd)''$(
+      # Git Prompt
+      if [[ $(__git_ps1) == *"*"* ]] # Unstaged changes *
+         then echo "'$purple'"$(__git_ps1 " (%s)")
+      elif [[ $(__git_ps1) == *"+"* ]] # Staged changes +
+         then echo "'$green'"$(__git_ps1 " (%s)")
+      elif [[ $(__git_ps1) == *"$"* ]] # Stashed files $
+         then echo "'$yellow'"$(__git_ps1 " (%s)")
+      elif [[ $(__git_ps1) == *"%"* ]] # Untracked files %
+         then echo "'$purple'"$(__git_ps1 " (%s)")
+      elif [[ $(__git_ps1) == *"<"* ]] # Upstream behind <
+         then echo "'$yellow'"$(__git_ps1 " (%s)")
+      elif [[ $(__git_ps1) == *">"* ]] # Upstream ahead >
+         then echo "'$yellow'"$(__git_ps1 " (%s)")
+      elif [[ $(__git_ps1) == *"<>"* ]] # Upstream diverged <>
+         then echo "'$yellow'"$(__git_ps1 " (%s)")
+      elif [[ $(__git_ps1) == *"="* ]] # Upstream no diff =
+         then echo "'$green'"$(__git_ps1 " (%s)")
+      else echo "'$white'"$(__git_ps1 " (%s)")
+      fi)'$white"\n\$ $reset"
+
+
+# Explain Git Prompt symbols
+alias expl='echo "
+   *  Unstaged changes
+   +  Staged changes
+   $  Stashed files
+   %  Untracked files
+   <  Upstream behind
+   >  Upstream ahead
+   <> Upstream diverged
+   =  No diff in upstream
+"'
+
+
+
+# ---------------------------------------------------------------------
+# Bash Completion
+# ---------------------------------------------------------------------
+if [ -f /etc/bash_completion ]; then
+   . /etc/bash_completion
+fi
+
+
+
+
+# ---------------------------------------------------------------------
+# Bash Command History
+# ---------------------------------------------------------------------
+
+# Ignore duplicate commands in the history
+export HISTCONTROL=ignoredups
+
+# Increase the maximum number of lines contained in the history file (default is 500)
+export HISTFILESIZE=10000
+
+# Append commands to the history every time a prompt is shown, instead of after closing the session.
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+
+
+
+# ---------------------------------------------------------------------
+# Settings & Options
+# ---------------------------------------------------------------------
+
+# Brew Cask: Set Path where the symlinks to the applications will be generated
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Set Default Editor to Sublime Text
+export EDITOR='subl -w'
+alias edit="$EDITOR"
+
+# Prefer US English and use UTF-8
+export LANG="en_US"
+export LC_ALL="en_US.UTF-8"
+
+# Add ColdFusion to Path
+export PATH=$PATH:/Applications/ColdFusion10/cfusion/bin
+
+# Don't clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+
+shopt -s extglob                 # extended pattern matching features
+shopt -s cdspell                 # correct dir spelling errors on cd
+shopt -s lithist                 # save multi-line commands with newlines
+shopt -s cmdhist                 # save multi-line commands in a single hist entry
+shopt -s cdable_vars             # if cd arg is not a dir, assume it is a var
+shopt -s no_empty_cmd_completion # don't try to complete empty cmds

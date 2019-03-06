@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<input type="email" name="$1" value="$2">$3
+]]></content>
+	<tabTrigger>inpemail</tabTrigger>
+	<description>HTML Input E-Mail</description>
+</snippet>

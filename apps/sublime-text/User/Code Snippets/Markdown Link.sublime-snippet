@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+[${1:Text}](${2:Link "Title"}) $0
+]]></content>
+	<tabTrigger>mlink</tabTrigger>
+	<description>Markdown Link</description>
+	<!-- <scope>text.html.markdown</scope> -->
+</snippet>

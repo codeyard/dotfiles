@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+<cfsetting enablecfoutputonly="true">
+
+<!---
+	${1:ffilehead}
+//--->
+
+<cfsilent>
+		$2
+</cfsilent>$3
+
+<cfsetting enablecfoutputonly="false">
+]]></content>
+	<tabTrigger>cftemp</tabTrigger>
+	<description>New ColdFusion Template CFM</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<meta name="robots" content="index" />
+<meta name="revisit-after" content="7 days" />$1
+]]></content>
+	<tabTrigger>mrobots</tabTrigger>
+	<description>HTML Meta Robots</description>
+</snippet>

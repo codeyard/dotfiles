@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+IIf($1, DE($2), DE($3))$4
+]]></content>
+	<tabTrigger>iif</tabTrigger>
+	<description>ColdFusion IIf</description>
+</snippet>

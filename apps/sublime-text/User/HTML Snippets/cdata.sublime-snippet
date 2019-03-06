@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<![CDATA[$1]]$NOT_DEFINED>$2
+]]></content>
+	<tabTrigger>cdata</tabTrigger>
+	<description>HTML CDATA</description>
+</snippet>

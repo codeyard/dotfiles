@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<cfscript>$1</cfscript>
+]]></content>
+	<tabTrigger>cfscr</tabTrigger>
+	<description>ColdFusion cfscript</description>
+</snippet>

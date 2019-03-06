@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+&laquo;$1&raquo;$2
+]]></content>
+	<tabTrigger>guil</tabTrigger>
+	<description>HTML «guillemets»</description>
+</snippet>

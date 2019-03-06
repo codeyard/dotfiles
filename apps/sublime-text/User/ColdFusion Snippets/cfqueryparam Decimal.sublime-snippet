@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<cfqueryparam value="$1" cfsqltype="cf_sql_decimal" scale="$2" />$3
+]]></content>
+	<tabTrigger>paramdeci</tabTrigger>
+	<description>ColdFusion cfqueryparam Decimal</description>
+</snippet>

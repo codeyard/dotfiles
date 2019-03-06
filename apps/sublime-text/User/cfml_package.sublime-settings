@@ -1,0 +1,7 @@
+{
+	"cfml_auto_insert_closing_tag": true,
+	"cfml_between_tag_pair": "indent",
+	"inline_doc_regions_highlight": true,
+	"cfml_hover_docs": false,
+	"testbox_enabled": false
+}

@@ -1,0 +1,84 @@
+[user]
+	name = Raphael Gerber
+	email = mail@raphaelgerber.com
+
+[alias]
+   co = checkout
+   ci = commit
+   st = status
+   br = branch
+   amend = commit --amend --all
+
+   # Commit all changes
+   ca = !git add -A && git commit -av
+
+   # View abbreviated SHA, description, and history graph of the latest 20 commits
+   l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+   # View log with colored graph, branch names, tags, users and relative dates
+   lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s (%cn, %cr) %C(bold blue)%Creset' --abbrev-commit --date=relative"
+
+   # View the current working tree status using the short format
+   s = status -s
+
+   # Show the diff between the latest commit and the current state
+   d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
+
+   # List with status and file names compared against master branch:
+   diffmaster = diff --name-status master
+
+   # List of file names compared against master branch:
+   diffnames = diff --name-only master
+
+   # Show verbose output about tags, branches or remotes
+   tags = tag -l
+   branches = branch -a
+   remotes = remote -v
+
+   # List contributors with number of commits
+   contributors = shortlog --summary --numbered
+
+   # View Diffs with diff-so-fancy
+	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
+
+   # List changed files
+   changed = "diff --name-only"
+
+[color]
+   # color opts: normal, black, red, green, yellow, blue, magenta, cyan, or white
+	ui = true
+
+[color "branch"]
+   current = yellow reverse
+   local = yellow
+   remote = green
+
+[color "diff"]
+   meta = yellow bold
+   commit = green bold
+   frag = magenta bold
+   old = red bold
+   new = green bold
+   #whitespace = red reverse
+
+[color "status"]
+   added = yellow
+   changed = green
+   untracked = cyan
+
+[core]
+   # Use custom `.gitignore` and `.gitattributes`
+   excludesfile = ~/.gitignore
+   #attributesfile = ~/.gitattributes
+   #whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[mergetool]
+   keepBackup = true
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

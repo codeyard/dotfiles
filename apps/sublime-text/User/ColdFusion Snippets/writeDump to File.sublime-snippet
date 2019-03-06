@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+writeDump(${1:Value}, '/var/www/wog-v3/${2:dump}.txt', 'text', false, '${3:Label}');$0
+]]></content>
+	<tabTrigger>fdmp</tabTrigger>
+	<description>ColdFusion cfscript writeDump to File</description>
+</snippet>

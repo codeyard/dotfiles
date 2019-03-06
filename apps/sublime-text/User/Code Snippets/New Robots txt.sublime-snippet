@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+# robots.txt for ${1:Website URL}
+
+User-agent: *
+Disallow: /${2:Folder}/
+Disallow: /${3:File}
+]]></content>
+	<tabTrigger>robots</tabTrigger>
+	<description>New Robots.txt File</description>
+</snippet>

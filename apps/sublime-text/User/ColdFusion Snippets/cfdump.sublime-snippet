@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<cfdump var="#$1#" />$2
+]]></content>
+	<tabTrigger>cfdmp</tabTrigger>
+	<description>ColdFusion cfdump</description>
+</snippet>

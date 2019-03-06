@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+try {
+	$1
+}
+
+catch (any excpt) {
+
+}
+]]></content>
+	<tabTrigger>trycatch</tabTrigger>
+	<description>ColdFusion cfscript Try Catch</description>
+</snippet>

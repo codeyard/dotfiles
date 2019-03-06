@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>$1</title>
+		<meta name="description" content="$2">
+		<meta name="keywords" content="$3" />
+		<link rel="stylesheet" type="text/css" href="$4">
+		<link rel="author" href="${5:humans.txt}">
+	</head>
+
+	<body>
+		$0
+		<script src="js/main.js"></script>
+	</body>
+</html>
+]]></content>
+	<tabTrigger>html5</tabTrigger>
+	<description>New HTML5 File</description>
+	<!-- <scope>text.html</scope> -->
+</snippet>

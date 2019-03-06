@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<cfcomponent displayname="$1" output="false" hint="$2">
+
+	<!---
+		${3:ffilehead}
+	//--->$4
+
+</cfcomponent>
+]]></content>
+	<tabTrigger>cfcomp</tabTrigger>
+	<description>New ColdFusion Component CFC</description>
+</snippet>

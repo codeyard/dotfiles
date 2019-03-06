@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+<!--- --------------------------------------------------------------------- --->
+<!--- $1 --->
+<!--- --------------------------------------------------------------------- --->
+$2
+]]></content>
+	<tabTrigger>cfdivider</tabTrigger>
+	<description>Divider ColdFusion</description>
+</snippet>

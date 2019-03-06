@@ -1,0 +1,364 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"hcomm": {
+		"prefix": "hcomm",
+		"body": "<!-- $1 -->$2",
+		"description": "Comment HTML"
+	},
+	"scomm": {
+		"prefix": "scomm",
+		"body": "/* $1 */$2",
+		"description": "Comment Script"
+	},
+	"divider": {
+		"prefix": "divider",
+		"body": "/* --------------------------------------------------------------------- */\n/* $1 */\n/* --------------------------------------------------------------------- */\n$2",
+		"description": "Divider Comment Script"
+	},
+	"shdivider": {
+		"prefix": "shdivider",
+		"body": "# ---------------------------------------------------------------------\n# $1\n# ---------------------------------------------------------------------\n$2",
+		"description": "Divider Comment Shell Bash"
+	},
+	"mquote": {
+		"prefix": "mquote",
+		"body": "> ${1:Quote}\n>\n> <cite>${2:Cite}</cite>\n$0",
+		"description": "Markdown Blockquote"
+	},
+	"mcb": {
+		"prefix": "mcb",
+		"body": "```$1\n$2\n```\n$0",
+		"description": "Markdown Code Block"
+	},
+	"mci": {
+		"prefix": "mci",
+		"body": "`$1` $0",
+		"description": "Markdown Code Inline"
+	},
+	"mimg": {
+		"prefix": "mimg",
+		"body": "![${1:Alt Txt}](${2:Source \"Title\"}) $0",
+		"description": "Markdown Image"
+	},
+	"mlink": {
+		"prefix": "mlink",
+		"body": "[${1:Text}](${2:Link \"Title\"}) $0",
+		"description": "Markdown Link"
+	},
+	"mstrike": {
+		"prefix": "mstrike",
+		"body": "~~$1~~ ${0}",
+		"description": "Markdown Strikethrough"
+	},
+	"mtable": {
+		"prefix": "mtable",
+		"body": "| ${1:Header 1}  | ${2:Header 2} |\n| ------------- | ------------- |\n| ${3:Cell 1}  | ${4:Cell 2} |${0}",
+		"description": "Markdown Table"
+	},
+	"html5": {
+		"prefix": "html5",
+		"body": "<!doctype html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n\t\t<title>$1</title>\n\t\t<meta name=\"description\" content=\"$2\">\n\t\t<meta name=\"keywords\" content=\"$3\" />\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"$4\">\n\t\t<link rel=\"author\" href=\"${5:humans.txt}\">\n\t</head>\n\n\t<body>\n\t\t$0\n\t\t<script src=\"js/main.js\"></script>\n\t</body>\n</html>",
+		"description": "New HTML5 File"
+	},
+	"robots": {
+		"prefix": "robots",
+		"body": "# robots.txt for ${1:Website URL}\n\nUser-agent: *\nDisallow: /${2:Folder}/\nDisallow: /${3:File}",
+		"description": "New Robots.txt File"
+	},
+	"yapage": {
+		"prefix": "yapage",
+		"body": "---\ntitle: $1\ndescription: $2\npermalink: $3\nlayout: page\ndate: ${4:yyyy-MM-dd HH:mm:ss, yadate}\nupdated: ${4:yyyy-MM-dd HH:mm:ss, yadate}\n---\n\n$5",
+		"description": "New Jekyll / YAML Page"
+	},
+	"yapost": {
+		"prefix": "yapost",
+		"body": "---\ntitle: $1\ndescription: $2\ntags: $3\ncomments: true\nlayout: post\ndate: ${4:yyyy-MM-dd HH:mm:ss, yadate}\nupdated: ${4:yyyy-MM-dd HH:mm:ss, yadate}\n---\n\n$5",
+		"description": "New Jekyll / YAML Post"
+	},
+	"auml": {
+		"prefix": "auml",
+		"body": "\\u00E4",
+		"description": "Resource Bundle ä"
+	},
+	"aacute": {
+		"prefix": "aacute",
+		"body": "\\u00e1",
+		"description": "Resource Bundle á"
+	},
+	"acirc": {
+		"prefix": "acirc",
+		"body": "\\u00e2",
+		"description": "Resource Bundle â"
+	},
+	"agrave": {
+		"prefix": "agrave",
+		"body": "\\u00e0",
+		"description": "Resource Bundle à"
+	},
+	"ccedil": {
+		"prefix": "ccedil",
+		"body": "\\u00e7",
+		"description": "Resource Bundle ç"
+	},
+	"eacute": {
+		"prefix": "eacute",
+		"body": "\\u00e9",
+		"description": "Resource Bundle é"
+	},
+	"ecirc": {
+		"prefix": "ecirc",
+		"body": "\n\\u00ea\n",
+		"description": "Resource Bundle ê"
+	},
+	"egrave": {
+		"prefix": "egrave",
+		"body": "\\u00e8",
+		"description": "Resource Bundle è"
+	},
+	"ouml": {
+		"prefix": "ouml",
+		"body": "\\u00F6",
+		"description": "Resource Bundle ö"
+	},
+	"ocirc": {
+		"prefix": "ocirc",
+		"body": "\\u00f4",
+		"description": "Resource Bundle ô"
+	},
+	"uuml": {
+		"prefix": "uuml",
+		"body": "\\u00FC",
+		"description": "Resource Bundle ü"
+	},
+	"uacute": {
+		"prefix": "uacute",
+		"body": "\\u00fa",
+		"description": "Resource Bundle ú"
+	},
+	"ugrave": {
+		"prefix": "ugrave",
+		"body": "\\u00f9",
+		"description": "Resource Bundle ù"
+	},
+	"Auml": {
+		"prefix": "Auml",
+		"body": "\\u00C4",
+		"description": "Resource Bundle Ä"
+	},
+	"Ccedil": {
+		"prefix": "Ccedil",
+		"body": "\\u00c7",
+		"description": "Resource Bundle Ç"
+	},
+	"Ouml": {
+		"prefix": "Ouml",
+		"body": "\\u00D6",
+		"description": "Resource Bundle Ö"
+	},
+	"Uuml": {
+		"prefix": "Uuml",
+		"body": "\\u00DC",
+		"description": "Resource Bundle Ü"
+	},
+	"bug": {
+		"prefix": "bug",
+		"body": "TODO: BUG: $1",
+		"description": "Task ToDo Bug"
+	},
+	"todo": {
+		"prefix": "todo",
+		"body": "TODO: $1",
+		"description": "Task ToDo"
+	},
+	"tstamp": {
+		"prefix": "tstamp",
+		"body": "${1:yyyy-mm-dd, dstamp} rgerber$2",
+		"description": "Time Stamp rgerber"
+	},
+	"version": {
+		"prefix": "version",
+		"body": "v ${1:Version} ${2:yyyy-mm-dd, dstamp} rgerber ${3:Description}",
+		"description": "Version Log rgerber"
+	},
+	"dl": {
+		"prefix": "dl",
+		"body": "<dl>\n\t<dt>$1</dt>\n\t\t<dd>$2</dd>\n\t<dt>$3</dt>\n\t\t<dd>$4</dd>\n</dl>$0",
+		"description": "HTML Definition List"
+	},
+	"dq": {
+		"prefix": "dq",
+		"body": "&ldquo;$1&rdquo;$2",
+		"description": "HTML Double Quotes"
+	},
+	"css": {
+		"prefix": "css",
+		"body": "<link rel=\"stylesheet\" type=\"text/css\" href=\"$1\">$2",
+		"description": "HTML Link CSS Stylesheet"
+	},
+	"favicon": {
+		"prefix": "favicon",
+		"body": "<link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/apple-touch-icon-57x57.png\">\n<link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/apple-touch-icon-60x60.png\">\n<link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/apple-touch-icon-72x72.png\">\n<link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/apple-touch-icon-76x76.png\">\n<link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/apple-touch-icon-114x114.png\">\n<link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/apple-touch-icon-120x120.png\">\n<link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/apple-touch-icon-144x144.png\">\n<link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/apple-touch-icon-152x152.png\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon-180x180.png\">\n<link rel=\"icon\" type=\"image/png\" href=\"/favicon-32x32.png\" sizes=\"32x32\">\n<link rel=\"icon\" type=\"image/png\" href=\"/android-chrome-192x192.png\" sizes=\"192x192\">\n<link rel=\"icon\" type=\"image/png\" href=\"/favicon-96x96.png\" sizes=\"96x96\">\n<link rel=\"icon\" type=\"image/png\" href=\"/favicon-16x16.png\" sizes=\"16x16\">\n<link rel=\"manifest\" href=\"/manifest.json\">\n<meta name=\"msapplication-TileColor\" content=\"#da532c\">\n<meta name=\"msapplication-TileImage\" content=\"/mstile-144x144.png\">\n<meta name=\"theme-color\" content=\"#ffffff\">",
+		"description": "HTML Link Favicon"
+	},
+	"feed": {
+		"prefix": "feed",
+		"body": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"$1\" href=\"$2\" />$3",
+		"description": "HTML Link Feed"
+	},
+	"js": {
+		"prefix": "js",
+		"body": "<script type=\"text/javascript\" src=\"$1\"></script>$2",
+		"description": "HTML Link JavaScript"
+	},
+	"sq": {
+		"prefix": "sq",
+		"body": "&lsquo;$1&rsquo;$2",
+		"description": "HTML Single Quotes"
+	},
+	"ahref": {
+		"prefix": "ahref",
+		"body": "<a href=\"$1\" title=\"$2\">$3</a>$4",
+		"description": "HTML Link Anchor a href"
+	},
+	"btn": {
+		"prefix": "btn",
+		"body": "<button type=\"${1:submit, button, reset}\" name=\"$2\" id=\"$3\" >$4</button>$5",
+		"description": "HTML Form Button"
+	},
+	"cdata": {
+		"prefix": "cdata",
+		"body": "//<![CDATA[\n\t$1\n//]]>$2",
+		"description": "HTML CDATA"
+	},
+	"fig": {
+		"prefix": "fig",
+		"body": "<figure>\n\t<img src=\"$1\" alt=\"$2\">\n\t<figcaption>$3</figcaption>\n</figure>$4",
+		"description": "HTML Figure"
+	},
+	"form": {
+		"prefix": "form",
+		"body": "<form action=\"$1\" method=\"post\" id=\"$2\">\n\t$3\n</form>",
+		"description": "HTML Form"
+	},
+	"guil": {
+		"prefix": "guil",
+		"body": "&laquo;$1&raquo;$2",
+		"description": "HTML «guillemets»"
+	},
+	"img": {
+		"prefix": "img",
+		"body": "<img src=\"$1\" alt=\"$2\">$3",
+		"description": "HTML Image"
+	},
+	"checkbox": {
+		"prefix": "checkbox",
+		"body": "<input type=\"checkbox\" name=\"$1\" value=\"$2\">$3",
+		"description": "HTML Input Checkbox"
+	},
+	"inpemail": {
+		"prefix": "inpemail",
+		"body": "<input type=\"email\" name=\"$1\" value=\"$2\">$3",
+		"description": "HTML Input E-Mail"
+	},
+	"inphidden": {
+		"prefix": "inphidden",
+		"body": "<input type=\"hidden\" name=\"$1\" value=\"$2\">$3",
+		"description": "HTML Input Hidden"
+	},
+	"inppassword": {
+		"prefix": "inppassword",
+		"body": "<input type=\"password\" name=\"$1\" value=\"$2\">$3",
+		"description": "HTML Input Password"
+	},
+	"radio": {
+		"prefix": "radio",
+		"body": "<input type=\"radio\" name=\"$1\" value=\"$2\">$3",
+		"description": "HTML Input Radio"
+	},
+	"inpsubmit": {
+		"prefix": "inpsubmit",
+		"body": "<input type=\"submit\" value=\"$1\">$2",
+		"description": "HTML Input Submit"
+	},
+	"inptel": {
+		"prefix": "inptel",
+		"body": "<input type=\"tel\" name=\"$1\" value=\"$2\">$3",
+		"description": "HTML Input Telephone"
+	},
+	"inptext": {
+		"prefix": "inptext",
+		"body": "<input type=\"text\" name=\"$1\" value=\"$2\">$3",
+		"description": "HTML Input Text"
+	},
+	"nocache": {
+		"prefix": "nocache",
+		"body": "<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\n<meta http-equiv=\"pragma\" content=\"no-proxy\" />\n<meta http-equiv=\"expires\" content=\"0\" />$1",
+		"description": "HTML Meta No Cache"
+	},
+	"mrobots": {
+		"prefix": "mrobots",
+		"body": "<meta name=\"robots\" content=\"index\" />\n<meta name=\"revisit-after\" content=\"7 days\" />$1",
+		"description": "HTML Meta Robots"
+	},
+	"meta": {
+		"prefix": "meta",
+		"body": "<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>$1</title>\n<meta name=\"description\" content=\"$2\">\n<meta name=\"keywords\" content=\"$3\" />",
+		"description": "HTML Meta tags"
+	},
+	"ol": {
+		"prefix": "ol",
+		"body": "<ol>\n\t<li>$1</li>\n\t<li>$2</li>\n\t<li>$3</li>\n\t<li>$4</li>\n</ol>$5",
+		"description": "HTML Ordered List"
+	},
+	"optgroup": {
+		"prefix": "optgroup",
+		"body": "<optgroup label=\"$1\">\n\t$2\n</optgroup>",
+		"description": "HTML Option Group"
+	},
+	"script": {
+		"prefix": "script",
+		"body": "<script type=\"text/javascript\">\n\t<![CDATA[\n\t\t$1\n\t]]$NOT_DEFINED>\n</script>",
+		"description": "HTML Script"
+	},
+	"select": {
+		"prefix": "select",
+		"body": "<select name=$1\">\n\t<option value=\"$2\">$3</option>\n\t<option value=\"$4\">$5</option>\n\t<option value=\"$6\">$7</option>\n</select>$8",
+		"description": "HTML Select Option"
+	},
+	"style": {
+		"prefix": "style",
+		"body": "<style type=\"text/css\">$1</style>",
+		"description": "HTML Style Tag"
+	},
+	"textarea": {
+		"prefix": "textarea",
+		"body": "<textarea name=\"$1\" rows=\"$2\" cols=\"$3\">$4</textarea>$5",
+		"description": "HTML Textarea"
+	},
+	"ul": {
+		"prefix": "ul",
+		"body": "<ul>\n\t<li>$1</li>\n\t<li>$2</li>\n\t<li>$3</li>\n\t<li>$4</li>\n</ul>$5",
+		"description": "HTML Unordered List"
+	},
+	"video": {
+		"prefix": "video",
+		"body": "<video width=\"$1\" height=\"$2\" controls=\"controls\">\n\t<source src=\"${3:video.mp4}\" type=\"video/mp4\" />\n\t<source src=\"${4:video.ogg}\" type=\"video/ogg\" />\n\tYour browser does not support the video tag.\n</video>$5",
+		"description": "HTML Video"
+	}
+}

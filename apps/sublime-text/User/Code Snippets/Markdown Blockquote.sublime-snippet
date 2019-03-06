@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+> ${1:Quote}
+>
+> <cite>${2:Cite}</cite>
+$0
+]]></content>
+	<tabTrigger>mquote</tabTrigger>
+	<description>Markdown Blockquote</description>
+	<!-- <scope>text.html.markdown</scope> -->
+</snippet>

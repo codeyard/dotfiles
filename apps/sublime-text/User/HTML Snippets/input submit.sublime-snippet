@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<input type="submit" value="$1">$2
+]]></content>
+	<tabTrigger>inpsubmit</tabTrigger>
+	<description>HTML Input Submit</description>
+</snippet>

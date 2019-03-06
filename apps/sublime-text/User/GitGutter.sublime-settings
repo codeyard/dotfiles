@@ -1,0 +1,11 @@
+{
+	// Add a special marker on untracked files
+	"show_markers_on_untracked_file": false,
+
+	// Display a phantom text at the end of the active line with information
+	// about who changed it using the output of `git blame`.
+	//   "auto"  -- show line annotation if word wrap is disabled (default)
+	//   "true"  -- always show line annotation
+	//   "false" -- never show line annotation
+	"show_line_annotation": "false",
+}

@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+	<cftransaction action="begin">
+		<cftry>
+			${1:Query}
+
+			<cfcatch type="database">
+				<cftransaction action="rollback" />
+			</cfcatch>
+		</cftry>
+	</cftransaction>
+]]></content>
+	<tabTrigger>qrytrycatch</tabTrigger>
+	<description>ColdFusion Try Catch with Rollback</description>
+</snippet>

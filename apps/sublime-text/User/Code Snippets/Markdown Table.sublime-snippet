@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+| ${1:Header 1}  | ${2:Header 2} |
+| ------------- | ------------- |
+| ${3:Cell 1}  | ${4:Cell 2} |${0}
+]]></content>
+	<tabTrigger>mtable</tabTrigger>
+	<description>Markdown Table</description>
+	<!-- <scope>text.html.markdown</scope> -->
+</snippet>

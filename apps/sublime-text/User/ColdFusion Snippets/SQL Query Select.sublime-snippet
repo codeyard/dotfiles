@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+	<cfquery name="$1" datasource="#variables.dsn#">
+		select	$2
+		from		$3 with (NoLock)
+		where		$4 = <cfqueryparam value="#arguments.$5#" cfsqltype="cf_sql_integer" />$0
+	</cfquery>
+]]></content>
+	<tabTrigger>qrysel</tabTrigger>
+	<description>SQL cfquery Select</description>
+</snippet>

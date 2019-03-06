@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+writeDump($1);$0
+]]></content>
+	<tabTrigger>dmp</tabTrigger>
+	<description>ColdFusion cfscript writeDump</description>
+</snippet>

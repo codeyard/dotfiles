@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+	<cfquery name="$1" datasource="#variables.dsn#">
+		update	$2 with (RowLock)
+		set		$3 = <cfqueryparam value="#arguments.$4#" cfsqltype="cf_sql_$5" />
+		where		$6 = <cfqueryparam value="#arguments.$7#" cfsqltype="cf_sql_integer" />$0
+	</cfquery>
+]]></content>
+	<tabTrigger>qryupd</tabTrigger>
+	<description>SQL cfquery Update</description>
+</snippet>

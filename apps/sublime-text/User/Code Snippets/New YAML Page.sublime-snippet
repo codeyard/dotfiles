@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+---
+title: $1
+description: $2
+permalink: $3
+layout: page
+date: ${4:yyyy-MM-dd HH:mm:ss, yadate}
+updated: ${4:yyyy-MM-dd HH:mm:ss, yadate}
+---
+
+$5
+]]></content>
+	<tabTrigger>yapage</tabTrigger>
+	<description>New Jekyll / YAML Page</description>
+</snippet>

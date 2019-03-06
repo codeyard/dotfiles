@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+Trim(LSNumberFormat($1, '_,___,___.__'))$2
+]]></content>
+	<tabTrigger>numberformat</tabTrigger>
+	<description>ColdFusion LSNumberFormat Swiss</description>
+</snippet>

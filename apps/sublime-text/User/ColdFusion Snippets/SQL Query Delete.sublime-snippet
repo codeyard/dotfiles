@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+	<cfquery name="$1" datasource="#variables.dsn#">
+		delete from	$2 with (RowLock)
+		where			$3 = <cfqueryparam value="#arguments.$4#" cfsqltype="cf_sql_integer" />$0
+	</cfquery>
+]]></content>
+	<tabTrigger>qrydel</tabTrigger>
+	<description>SQL cfquery Delete</description>
+</snippet>

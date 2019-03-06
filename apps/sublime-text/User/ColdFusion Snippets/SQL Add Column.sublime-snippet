@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+alter table	$1
+add			$2
+]]></content>
+	<tabTrigger>addcol</tabTrigger>
+	<description>SQL Add Column to Table</description>
+</snippet>

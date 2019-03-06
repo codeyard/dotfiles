@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<cfqueryparam value="$1" cfsqltype="cf_sql_$2" list="true" />$3
+]]></content>
+	<tabTrigger>paramlist</tabTrigger>
+	<description>ColdFusion cfqueryparam List</description>
+</snippet>

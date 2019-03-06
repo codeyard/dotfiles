@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<cfargument name="$1" type="$2" required="$3" $4/>$5
+]]></content>
+	<tabTrigger>cfarg</tabTrigger>
+	<description>ColdFusion cfargument</description>
+</snippet>

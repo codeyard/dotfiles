@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+${1:FileName} = application.beanFactory.getBean('${1:FileName}');
+]]></content>
+	<tabTrigger>beanfact</tabTrigger>
+	<description>Model-Glue Get File from Bean Factory</description>
+</snippet>

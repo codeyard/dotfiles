@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+&ldquo;$1&rdquo;$2
+]]></content>
+	<tabTrigger>dq</tabTrigger>
+	<description>HTML Double Quotes</description>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+argumentCollection=${1:arguments}$2
+]]></content>
+	<tabTrigger>argcoll</tabTrigger>
+	<description>ColdFusion argumentCollection</description>
+</snippet>

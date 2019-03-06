@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+writeLog(text='$1' type='${2:error, information, warning, fatal}' application='true' file='$3');$4
+]]></content>
+	<tabTrigger>log</tabTrigger>
+	<description>ColdFusion cfscript Log</description>
+</snippet>

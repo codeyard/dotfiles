@@ -1,0 +1,231 @@
+{
+	// Place your snippets for cfml here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"cfcomm": {
+		"prefix": "cfcomm",
+		"body": "<!--- $1 --->$2",
+		"description": "Comment ColdFusion"
+	},
+	"odbcdate": {
+		"prefix": "odbcdate",
+		"body": "CreateODBCDateTime(ListGetAt(${1:Value}, 2, \".\") & \"/\" & ListGetAt(${1:Value}, 1, \".\") & \"/\" & ListGetAt(${1:Value}, 3, \".\"))$2",
+		"description": "ColdFusion CreateODBCDateTime"
+	},
+	"cfdivider": {
+		"prefix": "cfdivider",
+		"body": "<!--- --------------------------------------------------------------------- --->\n<!--- $1 --->\n<!--- --------------------------------------------------------------------- --->\n$2",
+		"description": "Divider ColdFusion"
+	},
+	"dynvar": {
+		"prefix": "dynvar",
+		"body": "#variables[\"name_#dynamic#\"]#",
+		"description": "ColdFusion Dynamic Variable"
+	},
+	"iif": {
+		"prefix": "iif",
+		"body": "IIf($1, DE($2), DE($3))$4",
+		"description": "ColdFusion IIf"
+	},
+	"init": {
+		"prefix": "init",
+		"body": "<!--- --------------------------------------------------------------------- --->\n<!--- Initialization / Configuration --->\n<!--- --------------------------------------------------------------------- --->\n\t<cffunction name=\"init\" returntype=\"${1:Class Path}.${2:Object Name}\" access=\"public\" output=\"false\"\n\t\thint=\"I am the constructor for the $2 object.\">\n\t\t<cfargument name=\"dsn\" type=\"string\" required=\"true\" />\n\t\t<cfscript>\n\t\t\tvariables.dsn = arguments.dsn;\n\t\t\treturn this;\n\t\t</cfscript>\n\t</cffunction>$3",
+		"description": "ColdFusion Init CFC"
+	},
+	"numberformat": {
+		"prefix": "numberformat",
+		"body": "Trim(LSNumberFormat($1, '_,___,___.__'))$2",
+		"description": "ColdFusion LSNumberFormat Swiss"
+	},
+	"beanfact": {
+		"prefix": "beanfact",
+		"body": "${1:FileName} = application.beanFactory.getBean('${1:FileName}');",
+		"description": "Model-Glue Get File from Bean Factory"
+	},
+	"appcfc": {
+		"prefix": "appcfc",
+		"body": "<cfcomponent displayname=\"Application\" output=\"false\" hint=\"Application.cfc\">\n\n\t<cfscript>\n\t\tthis.name = \"${1:Application Name}\"; // Application name, should be unique\n\t\tthis.applicationTimeout = createTimeSpan(1,0,0,0); // How long application vars persist\n\t\tthis.clientManagement = false; // Should client vars be enabled?\n\t\tthis.clientStorage = \"registry\"; // Where should we store them, if enabled?\n\t\tthis.loginStorage = \"session\"; // Where should cflogin stuff persist?\n\t\tthis.sessionManagement = true; // Should we even use sessions?\n\t\tthis.sessionTimeout = CreateTimeSpan(0,0,30,0); // How long do session vars persist?\n\t\tthis.setClientCookies = true; // Should we set cookies on the browser?\n\t\tthis.setDomainCookies = false; // Should cookies be domain specific, ie, *.foo.com or www.foo.com\n\t\tthis.scriptProtect = \"all\"; // Should we try to block 'bad' input from users\n\t\t//this.secureJSON = false; // Should we secure our JSON calls?\n\t\t//this.secureJSONPrefix = \"\"; // Should we use a prefix in front of JSON strings?\n\t\t//this.welcomeFileList = \"\"; // Used to help CF work with missing files and dir indexes\n\n\t\t// Define custom CF mappings. Keys are mapping names, values are full paths\n\t\t// this.mappings = structNew();\n\t\t// this.mappings['/mapping'] = 'path';\n\n\t\t// Define a list of custom tag paths\n\t\t// this.customtagPaths = \"\";\n   </cfscript>\n\n\n\n<!--- --------------------------------------------------------------------- --->\n<!--- Application --->\n<!--- --------------------------------------------------------------------- --->\n\t<cffunction name=\"onApplicationStart\" returntype=\"boolean\" output=\"false\"\n\t\thint=\"I run when the application starts up.\">\n\t\t<cfscript>\n\t\t\tapplication.config = StructNew();\n\t\t\t// Determine path separator and new line character(s)\n\t\t\tif(Server.OS.Name contains 'Windows') {\n\t\t\t\tapplication.config.pathSeparator = '\\';\n\t\t\t\tapplication.config.newLine = chr(13) & chr(10);\n\t\t\t} else {\n\t\t\t\tapplication.config.pathSeparator = '/';\n\t\t\t\tapplication.config.newLine = chr(10);\n\t\t\t}\n\t\t\tapplication.config.rootDir = expandPath(\"./\");\n\n\t\t\t// Set Encoding & Locale\n\t\t\tapplication.config.pageEncoding = \"utf-8\";\n\t\t\tsetEncoding(\"form\", application.config.pageEncoding);\n\t\t\tsetEncoding(\"url\", application.config.pageEncoding);\n\t\t\tsetLocale(\"German (Swiss)\");\n\n\t\t\treturn true;\n\t\t</cfscript>\n\t</cffunction>\n\n\n\n\t<cffunction name=\"onApplicationEnd\" returntype=\"void\" output=\"false\"\n\t\thint=\"I run when the application stops.\">\n\t\t<cfargument name=\"applicationScope\" required=\"true\" />\n\t</cffunction>\n\n\n\n<!--- --------------------------------------------------------------------- --->\n<!--- Request --->\n<!--- --------------------------------------------------------------------- --->\n\t<cffunction name=\"onRequestStart\" returntype=\"boolean\" output=\"false\"\n\t\thint=\"I run before the request is processed.\">\n\t\t<cfargument name=\"thePage\" type=\"string\" required=\"true\" />\n\t\t<cfscript>\n\t\t\t// Reinit Application\n\t\t\tif (structKeyExists(url, \"reinit\") and url.reinit) {\n\t\t\t\tstructClear(session);\n\t\t\t\tstructClear(application);\n\t\t\t\tflushCache();\n\t\t\t\tonApplicationStart();\n\t\t\t\tonSessionStart();\n\t\t\t}\n\n\t\t\t// Reset Session\n\t\t\tif (structKeyExists(url, \"reset\") and url.reset) {\n\t\t\t\tstructClear(session);\n\t\t\t\tonSessionStart();\n\t\t\t}\n\n\t\t\t// Flush Cache\n\t\t\tif (StructKeyExists(url, \"flush\") and url.flush) {\n\t\t\t\tflushCache();\n\t\t\t}\n\n\t\t\t// Set Encoding & Locale\n\t\t\tsetEncoding(\"form\", application.pageEncoding);\n\t\t\tsetEncoding(\"url\", application.pageEncoding);\n\t\t\tsetLocale(\"German (Swiss)\");\n\n\t\t\treturn true;\n\t\t</cfscript>\n\t</cffunction>\n\n\n\n\t<!--- <cffunction name=\"onRequest\" returntype=\"void\" output=\"false\"\n\t\thint=\"I run before the request as well, after onRequestStart.\">\n\t\t<cfargument name=\"thePage\" type=\"string\" required=\"true\" />\n\t\t<cfinclude template=\"#arguments.thePage#\" />\n\t</cffunction>\n\t --->\n\n\n\n\t<cffunction name=\"onRequestEnd\" returntype=\"void\" output=\"false\"\n\t\thint=\"I run at the end of the request.\">\n\t\t<cfargument name=\"thePage\" type=\"string\" required=\"true\" />\n\t</cffunction>\n\n\n\n\t<cffunction name=\"flushCache\" returntype=\"void\" access=\"private\" output=\"false\"\n\t\thint=\"I flush the Object Cache.\">\n\t\t<cfobjectcache action=\"clear\" />\n\t</cffunction>\n\n\n\n<!--- --------------------------------------------------------------------- --->\n<!--- Session --->\n<!--- --------------------------------------------------------------------- --->\n\t<cffunction name=\"onSessionStart\" returntype=\"void\" output=\"false\"\n\t\thint=\"I run when a session starts.\">\n\t\t<cfscript>\n\t\t\tsession.started = now();\n\t\t\tsession.isInitialized = true;\n\t\t</cfscript>\n\t</cffunction>\n\n\n\n\t<cffunction name=\"onSessionEnd\" returntype=\"void\" output=\"false\"\n\t\thint=\"I run when a session ends.\">\n\t\t<cfargument name=\"sessionScope\" type=\"struct\" required=\"true\" />\n\t\t<cfargument name=\"applicationScope\" type=\"struct\" required=\"false\" />\n\t\t<cfscript>\n\t\t\tvar sessionLength = TimeFormat(Now() - arguments.sessionScope.started, \"HH:mm:ss\");\n\t\t\tstructClear(session);\n\t\t</cfscript>\n\t\t<cflog file=\"#this.name#\" type=\"Information\" text=\"Session #arguments.sessionScope.sessionid# ended. Length: #sessionLength#\" />\n\t</cffunction>\n\n\n\n<!--- --------------------------------------------------------------------- --->\n<!--- Missing Template --->\n<!--- --------------------------------------------------------------------- --->\n\t<cffunction name=\"onMissingTemplate\" returntype=\"boolean\" output=\"true\"\n\t\thint=\"I am fired when a user requests a CFM file that doesn't exist.\">\n\t\t<cfargument name=\"targetPage\" type=\"string\" required=\"true\" />\n\t\t<cftry>\n\t\t\t<!--- Log all errors. --->\n\t\t\t<cflog file=\"#this.name#\" type=\"Error\" text=\"Missing template: #Arguments.targetPage#\" />\n\t\t\t<!--- Display an error message. --->\n\t\t\t<cfoutput>\n\t\t\t\t<h3>#arguments.targetPage# could not be found.</h3>\n\t\t\t\t<p>You requested a non-existent ColdFusion page.<br />Please check the URL.</p>\n\t\t\t</cfoutput>\n\t\t\t<cfreturn true />\n\t\t\t<!--- If an error occurs, return false and the default error handler will run. --->\n\t\t\t<cfcatch>\n\t\t\t\t<cfreturn false />\n\t\t\t</cfcatch>\n\t\t</cftry>\n\t</cffunction>\n\n\n\n<!--- --------------------------------------------------------------------- --->\n<!--- Error --->\n<!--- --------------------------------------------------------------------- --->\n\t<cffunction name=\"onError\" returntype=\"void\" output=\"false\"\n\t\thint=\"I run on error.\">\n\t\t<cfargument name=\"exception\" required=\"true\" />\n\t\t<cfargument name=\"eventName\" type=\"string\" required=\"true\" />\n\t\t<cfdump var=\"#arguments.exception#\" label=\"onError Exception\" expand=\"false\" />\n\t\t<cfdump var=\"onError Event Name: #arguments.eventName#\" label=\"onError EventName\" expand=\"false\" />\n\t\t<cfabort />\n\t</cffunction>\n\n</cfcomponent>",
+		"description": "New ColdFusion Application.cfc File"
+	},
+	"cfcomp": {
+		"prefix": "cfcomp",
+		"body": "<cfcomponent displayname=\"$1\" output=\"false\" hint=\"$2\">\n\n\t<!---\n\t\t${3:ffilehead}\n\t//--->$4\n\n</cfcomponent>",
+		"description": "New ColdFusion Component CFC"
+	},
+	"cftemp": {
+		"prefix": "cftemp",
+		"body": "<cfsetting enablecfoutputonly=\"true\">\n\n<!---\n\t${1:ffilehead}\n//--->\n\n<cfsilent>\n\t\t$2\n</cfsilent>$3\n\n<cfsetting enablecfoutputonly=\"false\">",
+		"description": "New ColdFusion Template CFM"
+	},
+	"isdate": {
+		"prefix": "isdate",
+		"body": "([0-9]{2}\\.[0-9]{2}\\.[0-9]{4}|^\\d*$)",
+		"description": "RegEx Check is Valid Date"
+	},
+	"ismail": {
+		"prefix": "ismail",
+		"body": "^[_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.(([a-zA-Z]{2,3})|(aero|coop|info|museum|name))$",
+		"description": "RegEx Check is Valid E-Mail"
+	},
+	"addcol": {
+		"prefix": "addcol",
+		"body": "alter table\t$1\nadd\t\t\t$2",
+		"description": "SQL Add Column to Table"
+	},
+	"qrydel": {
+		"prefix": "qrydel",
+		"body": "\t<cfquery name=\"$1\" datasource=\"#variables.dsn#\">\n\t\tdelete from\t$2 with (RowLock)\n\t\twhere\t\t\t$3 = <cfqueryparam value=\"#arguments.$4#\" cfsqltype=\"cf_sql_integer\" />$0\n\t</cfquery>",
+		"description": "SQL cfquery Delete"
+	},
+	"qryins": {
+		"prefix": "qryins",
+		"body": "\t<cfquery name=\"$1\" datasource=\"#variables.dsn#\">\n\t\tinsert into $2 (\n\t\t\t$3\n\t\t)\n\t\tvalues (\n\t\t\t<cfqueryparam value=\"#arguments.$4#\" cfsqltype=\"cf_sql_$5\" />$0\n\t\t)\n\t</cfquery>",
+		"description": "SQL cfquery Insert"
+	},
+	"qrypagination": {
+		"prefix": "qrypagination",
+		"body": "\t<cfquery name=\"$1\" datasource=\"#variables.dsn#\">\n\t\tselect\ttop ${2:Max Rows} *\n\t\tfrom\n\t\t\t(select\trow_number() over (order by ${3:Order By}) as RowNumber,\n\t\t\t\t\t\tTotalRows = Count(*) over(),\n\t\t\t\t\t\t$4\n\n\t\t\tfrom\t\t$5 with (NoLock)\n\n\t\t\twhere\t\t$6\n\t\t\t) _tmpInlineView\n\t\twhere\t\tRowNumber >= <cfqueryparam value=\"#${7:Start Row}#\" cfsqltype=\"cf_sql_integer\" />\n\t\torder by\tRowNumber asc\n\t</cfquery>",
+		"description": "SQL cfquery Pagination"
+	},
+	"qrysel": {
+		"prefix": "qrysel",
+		"body": "\t<cfquery name=\"$1\" datasource=\"#variables.dsn#\">\n\t\tselect\t$2\n\t\tfrom\t\t$3 with (NoLock)\n\t\twhere\t\t$4 = <cfqueryparam value=\"#arguments.$5#\" cfsqltype=\"cf_sql_integer\" />$0\n\t</cfquery>",
+		"description": "SQL cfquery Select"
+	},
+	"qryupd": {
+		"prefix": "qryupd",
+		"body": "\t<cfquery name=\"$1\" datasource=\"#variables.dsn#\">\n\t\tupdate\t$2 with (RowLock)\n\t\tset\t\t$3 = <cfqueryparam value=\"#arguments.$4#\" cfsqltype=\"cf_sql_$5\" />\n\t\twhere\t\t$6 = <cfqueryparam value=\"#arguments.$7#\" cfsqltype=\"cf_sql_integer\" />$0\n\t</cfquery>",
+		"description": "SQL cfquery Update"
+	},
+	"cached": {
+		"prefix": "cached",
+		"body": "cachedwithin=\"#CreateTimeSpan(${1:Days},${2:Hours},${3:Minutes},${4:Seconds})#\"$0",
+		"description": "SQL cfquery cachedwithin"
+	},
+	"log": {
+		"prefix": "log",
+		"body": "writeLog(text='$1' type='${2:error, information, warning, fatal}' application='true' file='$3');$4",
+		"description": "ColdFusion cfscript Log"
+	},
+	"loop": {
+		"prefix": "loop",
+		"body": "for (${1:Index}=1; ${1:Index} ${2:Condition}; ${1:Index}=${1:Index}+1) {\n\t$3\n}",
+		"description": "ColdFusion cfscript Loop"
+	},
+	"switch": {
+		"prefix": "switch",
+		"body": "switch($1) {\n\tcase $2: $3\n\tbreak;$4\n}",
+		"description": "ColdFusion cfscript Switch"
+	},
+	"trycatch": {
+		"prefix": "trycatch",
+		"body": "try {\n\t$1\n}\n\ncatch (any excpt) {\n\n}",
+		"description": "ColdFusion cfscript Try Catch"
+	},
+	"setget": {
+		"prefix": "setget",
+		"body": "\t<cffunction name=\"set${1:Name UCase}\" returntype=\"void\" access=\"public\" output=\"false\"\n\t\thint=\"I set the ${1:Name UCase} property.\">\n\t\t<cfargument name=\"${2:Name LCase}\" type=\"${3:Type}\" required=\"true\" />\n\t\t<cfset variables.instance.${2:Name LCase} = arguments.${2:Name LCase} />\n\t</cffunction>\n\n\t<cffunction name=\"get${1:Name UCase}\" returntype=\"${3:Type}\" access=\"public\" output=\"false\"\n\t\thint=\"I get the ${1:Name UCase} property.\">\n\t\t<cfreturn variables.instance.${2:Name LCase} />\n\t</cffunction>$0",
+		"description": "ColdFusion Setter & Getter"
+	},
+	"trim": {
+		"prefix": "trim",
+		"body": "Trim($1)$2",
+		"description": "ColdFusion Trim"
+	},
+	"qrytrycatch": {
+		"prefix": "qrytrycatch",
+		"body": "\t<cftransaction action=\"begin\">\n\t\t<cftry>\n\t\t\t${1:Query}\n\n\t\t\t<cfcatch type=\"database\">\n\t\t\t\t<cftransaction action=\"rollback\" />\n\t\t\t</cfcatch>\n\t\t</cftry>\n\t</cftransaction>",
+		"description": "ColdFusion Try Catch with Rollback"
+	},
+	"qrytrycatch1": {
+		"prefix": "qrytrycatch",
+		"body": "\t<cftry>\n\t\t$1\n\n\t\t<cfcatch type=\"any\">\n\t\t\t$2\n\t\t</cfcatch>\n\t</cftry>",
+		"description": "ColdFusion Try Catch"
+	},
+	"argcoll": {
+		"prefix": "argcoll",
+		"body": "argumentCollection=${1:arguments}$2",
+		"description": "ColdFusion argumentCollection"
+	},
+	"cfarg": {
+		"prefix": "cfarg",
+		"body": "<cfargument name=\"$1\" type=\"$2\" required=\"$3\" $4/>$5",
+		"description": "ColdFusion cfargument"
+	},
+	"cfdmp": {
+		"prefix": "cfdmp",
+		"body": "<cfdump var=\"#$1#\" />$2",
+		"description": "ColdFusion cfdump"
+	},
+	"cffunc": {
+		"prefix": "cffunc",
+		"body": "\t<cffunction name=\"$1\" returntype=\"$2\" access=\"$3\" output=\"false\"\n\t\thint=\"$4\">\n\t\t$5\n\t</cffunction>",
+		"description": "ColdFusion cffunction"
+	},
+	"cflog": {
+		"prefix": "cflog",
+		"body": "<cflog text=\"$1\" type=\"${2:error, information, warning, fatal}\" application=\"true\" file=\"$3\" />$4",
+		"description": "ColdFusion cflog"
+	},
+	"cfoutput": {
+		"prefix": "cfoutput",
+		"body": "<cfoutput>$1</cfoutput>$2",
+		"description": "ColdFusion cfoutput"
+	},
+	"cfprop": {
+		"prefix": "cfprop",
+		"body": "<cfproperty name=\"$1\" type=\"$2\" required=\"$3\" default=\"$4\" />$5",
+		"description": "ColdFusion cfproperty"
+	},
+	"paramdeci": {
+		"prefix": "paramdeci",
+		"body": "<cfqueryparam value=\"$1\" cfsqltype=\"cf_sql_decimal\" scale=\"$2\" />$3",
+		"description": "ColdFusion cfqueryparam Decimal"
+	},
+	"paramlist": {
+		"prefix": "paramlist",
+		"body": "<cfqueryparam value=\"$1\" cfsqltype=\"cf_sql_$2\" list=\"true\" />$3",
+		"description": "ColdFusion cfqueryparam List"
+	},
+	"qryparam": {
+		"prefix": "qryparam",
+		"body": "<cfqueryparam value=\"$1\" cfsqltype=\"cf_sql_$2\" />$3",
+		"description": "ColdFusion cfqueryparam"
+	},
+	"cfscr": {
+		"prefix": "cfscr",
+		"body": "<cfscript>$1</cfscript>",
+		"description": "ColdFusion cfscript"
+	},
+	"createobj": {
+		"prefix": "createobj",
+		"body": "createObject('component', '$1')$2",
+		"description": "ColdFusion createObject"
+	},
+	"fdmp": {
+		"prefix": "fdmp",
+		"body": "writeDump(${1:Value}, '/var/www/wog-v3/${2:dump}.txt', 'text', false, '${3:Label}');$0",
+		"description": "ColdFusion cfscript writeDump to File"
+	},
+	"dmp": {
+		"prefix": "dmp",
+		"body": "writeDump($1);$0",
+		"description": "ColdFusion cfscript writeDump"
+	},
+	"outp": {
+		"prefix": "outp",
+		"body": "writeOutput($1);$2",
+		"description": "ColdFusion cfscript writeOutput"
+	}
+}

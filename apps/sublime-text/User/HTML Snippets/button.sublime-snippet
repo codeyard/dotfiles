@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<button type="${1:submit, button, reset}" name="$2" id="$3" >$4</button>$5
+]]></content>
+	<tabTrigger>btn</tabTrigger>
+	<description>HTML Form Button</description>
+</snippet>

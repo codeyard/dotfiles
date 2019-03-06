@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<script type="text/javascript">
+	<![CDATA[
+		$1
+	]]$NOT_DEFINED>
+</script>
+]]></content>
+	<tabTrigger>script</tabTrigger>
+	<description>HTML Script</description>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+${1:yyyy-mm-dd, dstamp} rgerber$2
+]]></content>
+	<tabTrigger>tstamp</tabTrigger>
+	<description>Time Stamp rgerber</description>
+</snippet>

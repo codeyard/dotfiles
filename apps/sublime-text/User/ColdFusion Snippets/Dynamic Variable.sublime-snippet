@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+#variables["name_#dynamic#"]#
+]]></content>
+	<tabTrigger>dynvar</tabTrigger>
+	<description>ColdFusion Dynamic Variable</description>
+</snippet>

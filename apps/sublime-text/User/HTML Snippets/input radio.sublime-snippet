@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<input type="radio" name="$1" value="$2">$3
+]]></content>
+	<tabTrigger>radio</tabTrigger>
+	<description>HTML Input Radio</description>
+</snippet>

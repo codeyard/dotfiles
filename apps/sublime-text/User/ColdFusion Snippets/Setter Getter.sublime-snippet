@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+	<cffunction name="set${1:Name UCase}" returntype="void" access="public" output="false"
+		hint="I set the ${1:Name UCase} property.">
+		<cfargument name="${2:Name LCase}" type="${3:Type}" required="true" />
+		<cfset variables.instance.${2:Name LCase} = arguments.${2:Name LCase} />
+	</cffunction>
+
+	<cffunction name="get${1:Name UCase}" returntype="${3:Type}" access="public" output="false"
+		hint="I get the ${1:Name UCase} property.">
+		<cfreturn variables.instance.${2:Name LCase} />
+	</cffunction>$0
+]]></content>
+	<tabTrigger>setget</tabTrigger>
+	<description>ColdFusion Setter & Getter</description>
+</snippet>

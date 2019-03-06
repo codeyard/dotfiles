@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<cfproperty name="$1" type="$2" required="$3" default="$4" />$5
+]]></content>
+	<tabTrigger>cfprop</tabTrigger>
+	<description>ColdFusion cfproperty</description>
+</snippet>

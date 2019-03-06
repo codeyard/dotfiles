@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+CreateODBCDateTime(ListGetAt(${1:Value}, 2, ".") & "/" & ListGetAt(${1:Value}, 1, ".") & "/" & ListGetAt(${1:Value}, 3, "."))$2
+]]></content>
+	<tabTrigger>odbcdate</tabTrigger>
+	<description>ColdFusion CreateODBCDateTime</description>
+</snippet>

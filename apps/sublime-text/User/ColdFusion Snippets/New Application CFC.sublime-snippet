@@ -1,0 +1,193 @@
+<snippet>
+	<content><![CDATA[
+<cfcomponent displayname="Application" output="false" hint="Application.cfc">
+
+	<cfscript>
+		this.name = "${1:Application Name}"; // Application name, should be unique
+		this.applicationTimeout = createTimeSpan(1,0,0,0); // How long application vars persist
+		this.clientManagement = false; // Should client vars be enabled?
+		this.clientStorage = "registry"; // Where should we store them, if enabled?
+		this.loginStorage = "session"; // Where should cflogin stuff persist?
+		this.sessionManagement = true; // Should we even use sessions?
+		this.sessionTimeout = CreateTimeSpan(0,0,30,0); // How long do session vars persist?
+		this.setClientCookies = true; // Should we set cookies on the browser?
+		this.setDomainCookies = false; // Should cookies be domain specific, ie, *.foo.com or www.foo.com
+		this.scriptProtect = "all"; // Should we try to block 'bad' input from users
+		//this.secureJSON = false; // Should we secure our JSON calls?
+		//this.secureJSONPrefix = ""; // Should we use a prefix in front of JSON strings?
+		//this.welcomeFileList = ""; // Used to help CF work with missing files and dir indexes
+
+		// Define custom CF mappings. Keys are mapping names, values are full paths
+		// this.mappings = structNew();
+		// this.mappings['/mapping'] = 'path';
+
+		// Define a list of custom tag paths
+		// this.customtagPaths = "";
+   </cfscript>
+
+
+
+<!--- --------------------------------------------------------------------- --->
+<!--- Application --->
+<!--- --------------------------------------------------------------------- --->
+	<cffunction name="onApplicationStart" returntype="boolean" output="false"
+		hint="I run when the application starts up.">
+		<cfscript>
+			application.config = StructNew();
+			// Determine path separator and new line character(s)
+			if(Server.OS.Name contains 'Windows') {
+				application.config.pathSeparator = '\';
+				application.config.newLine = chr(13) & chr(10);
+			} else {
+				application.config.pathSeparator = '/';
+				application.config.newLine = chr(10);
+			}
+			application.config.rootDir = expandPath("./");
+
+			// Set Encoding & Locale
+			application.config.pageEncoding = "utf-8";
+			setEncoding("form", application.config.pageEncoding);
+			setEncoding("url", application.config.pageEncoding);
+			setLocale("German (Swiss)");
+
+			return true;
+		</cfscript>
+	</cffunction>
+
+
+
+	<cffunction name="onApplicationEnd" returntype="void" output="false"
+		hint="I run when the application stops.">
+		<cfargument name="applicationScope" required="true" />
+	</cffunction>
+
+
+
+<!--- --------------------------------------------------------------------- --->
+<!--- Request --->
+<!--- --------------------------------------------------------------------- --->
+	<cffunction name="onRequestStart" returntype="boolean" output="false"
+		hint="I run before the request is processed.">
+		<cfargument name="thePage" type="string" required="true" />
+		<cfscript>
+			// Reinit Application
+			if (structKeyExists(url, "reinit") and url.reinit) {
+				structClear(session);
+				structClear(application);
+				flushCache();
+				onApplicationStart();
+				onSessionStart();
+			}
+
+			// Reset Session
+			if (structKeyExists(url, "reset") and url.reset) {
+				structClear(session);
+				onSessionStart();
+			}
+
+			// Flush Cache
+			if (StructKeyExists(url, "flush") and url.flush) {
+				flushCache();
+			}
+
+			// Set Encoding & Locale
+			setEncoding("form", application.pageEncoding);
+			setEncoding("url", application.pageEncoding);
+			setLocale("German (Swiss)");
+
+			return true;
+		</cfscript>
+	</cffunction>
+
+
+
+	<!--- <cffunction name="onRequest" returntype="void" output="false"
+		hint="I run before the request as well, after onRequestStart.">
+		<cfargument name="thePage" type="string" required="true" />
+		<cfinclude template="#arguments.thePage#" />
+	</cffunction>
+	 --->
+
+
+
+	<cffunction name="onRequestEnd" returntype="void" output="false"
+		hint="I run at the end of the request.">
+		<cfargument name="thePage" type="string" required="true" />
+	</cffunction>
+
+
+
+	<cffunction name="flushCache" returntype="void" access="private" output="false"
+		hint="I flush the Object Cache.">
+		<cfobjectcache action="clear" />
+	</cffunction>
+
+
+
+<!--- --------------------------------------------------------------------- --->
+<!--- Session --->
+<!--- --------------------------------------------------------------------- --->
+	<cffunction name="onSessionStart" returntype="void" output="false"
+		hint="I run when a session starts.">
+		<cfscript>
+			session.started = now();
+			session.isInitialized = true;
+		</cfscript>
+	</cffunction>
+
+
+
+	<cffunction name="onSessionEnd" returntype="void" output="false"
+		hint="I run when a session ends.">
+		<cfargument name="sessionScope" type="struct" required="true" />
+		<cfargument name="applicationScope" type="struct" required="false" />
+		<cfscript>
+			var sessionLength = TimeFormat(Now() - arguments.sessionScope.started, "HH:mm:ss");
+			structClear(session);
+		</cfscript>
+		<cflog file="#this.name#" type="Information" text="Session #arguments.sessionScope.sessionid# ended. Length: #sessionLength#" />
+	</cffunction>
+
+
+
+<!--- --------------------------------------------------------------------- --->
+<!--- Missing Template --->
+<!--- --------------------------------------------------------------------- --->
+	<cffunction name="onMissingTemplate" returntype="boolean" output="true"
+		hint="I am fired when a user requests a CFM file that doesn't exist.">
+		<cfargument name="targetPage" type="string" required="true" />
+		<cftry>
+			<!--- Log all errors. --->
+			<cflog file="#this.name#" type="Error" text="Missing template: #Arguments.targetPage#" />
+			<!--- Display an error message. --->
+			<cfoutput>
+				<h3>#arguments.targetPage# could not be found.</h3>
+				<p>You requested a non-existent ColdFusion page.<br />Please check the URL.</p>
+			</cfoutput>
+			<cfreturn true />
+			<!--- If an error occurs, return false and the default error handler will run. --->
+			<cfcatch>
+				<cfreturn false />
+			</cfcatch>
+		</cftry>
+	</cffunction>
+
+
+
+<!--- --------------------------------------------------------------------- --->
+<!--- Error --->
+<!--- --------------------------------------------------------------------- --->
+	<cffunction name="onError" returntype="void" output="false"
+		hint="I run on error.">
+		<cfargument name="exception" required="true" />
+		<cfargument name="eventName" type="string" required="true" />
+		<cfdump var="#arguments.exception#" label="onError Exception" expand="false" />
+		<cfdump var="onError Event Name: #arguments.eventName#" label="onError EventName" expand="false" />
+		<cfabort />
+	</cffunction>
+
+</cfcomponent>
+]]></content>
+	<tabTrigger>appcfc</tabTrigger>
+	<description>New ColdFusion Application.cfc File</description>
+</snippet>

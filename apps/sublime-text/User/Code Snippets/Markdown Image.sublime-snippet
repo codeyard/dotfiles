@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+![${1:Alt Txt}](${2:Source "Title"}) $0
+]]></content>
+	<tabTrigger>mimg</tabTrigger>
+	<description>Markdown Image</description>
+	<!-- <scope>text.html.markdown</scope> -->
+</snippet>

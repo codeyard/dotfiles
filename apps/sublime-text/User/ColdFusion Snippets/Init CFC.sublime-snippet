@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+<!--- --------------------------------------------------------------------- --->
+<!--- Initialization / Configuration --->
+<!--- --------------------------------------------------------------------- --->
+	<cffunction name="init" returntype="${1:Class Path}.${2:Object Name}" access="public" output="false"
+		hint="I am the constructor for the $2 object.">
+		<cfargument name="dsn" type="string" required="true" />
+		<cfscript>
+			variables.dsn = arguments.dsn;
+			return this;
+		</cfscript>
+	</cffunction>$3
+]]></content>
+	<tabTrigger>init</tabTrigger>
+	<description>ColdFusion Init CFC</description>
+</snippet>

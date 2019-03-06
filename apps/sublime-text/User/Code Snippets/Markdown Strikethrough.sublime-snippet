@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+~~$1~~ ${0}
+]]></content>
+	<tabTrigger>mstrike</tabTrigger>
+	<description>Markdown Strikethrough</description>
+	<!-- <scope>text.html.markdown</scope> -->
+</snippet>

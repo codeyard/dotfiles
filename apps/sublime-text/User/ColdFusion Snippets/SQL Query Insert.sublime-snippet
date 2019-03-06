@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+	<cfquery name="$1" datasource="#variables.dsn#">
+		insert into $2 (
+			$3
+		)
+		values (
+			<cfqueryparam value="#arguments.$4#" cfsqltype="cf_sql_$5" />$0
+		)
+	</cfquery>
+]]></content>
+	<tabTrigger>qryins</tabTrigger>
+	<description>SQL cfquery Insert</description>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([a-zA-Z]{2,3})|(aero|coop|info|museum|name))$
+]]></content>
+	<tabTrigger>ismail</tabTrigger>
+	<description>RegEx Check is Valid E-Mail</description>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<form action="$1" method="post" id="$2">
+	$3
+</form>
+]]></content>
+	<tabTrigger>form</tabTrigger>
+	<description>HTML Form</description>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+	<cftry>
+		$1
+
+		<cfcatch type="any">
+			$2
+		</cfcatch>
+	</cftry>
+]]></content>
+	<tabTrigger>qrytrycatch</tabTrigger>
+	<description>ColdFusion Try Catch</description>
+</snippet>
