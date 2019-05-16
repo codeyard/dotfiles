@@ -3,13 +3,13 @@
 ## Installed
 
 - [All Autocomplete](https://github.com/atishay/vscode-allautocomplete): Create autocomplete items from open files in VSCode.
-- [Auto Close Tag](https://github.com/formulahendry/vscode-auto-close-tag): Automatically add HTML/XML close tag.
+- [Bracket Pair Colorizer 2](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2): This extension allows matching brackets to be identified with colours. The user can define which tokens to match, and which colours to use.
 - [Brewfile](https://marketplace.visualstudio.com/items?itemName=sharat.vscode-brewfile): Syntax Highlighting for Brewfile
 - [CFLint](https://github.com/KamasamaK/vscode-cflint): CFLint (a linter for CFML) for Visual Studio Code.
 - [CFML](https://github.com/KamasamaK/vscode-cfml): CFML language.
-- [Code Runner](https://github.com/formulahendry/vscode-code-runner): Run code snippet or code file for multiple languages.
 - [compareit](https://github.com/in4margaret/compareit) helps to compare two files wich you can choose from your current project and other directory on your computer or clipboard.
 - [Docker](https://github.com/microsoft/vscode-docker): Adds syntax highlighting, commands, hover tips, and linting for Dockerfile and docker-compose files.
+- [Elasticsearch for VSCode](https://github.com/hsen-dev/vscode-elastic): An extension for developing elasticsearch queries like Kibana console and Sense extention.
 - [ESLint](https://github.com/Microsoft/vscode-eslint): Integrates ESLint JavaScript into VS Code.
 - [GitLens](https://github.com/eamodio/vscode-gitlens): Supercharge the Git capabilities built into Visual Studio Code — Visualize code authorship at a glance via Git blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via powerful comparison commands, and so much more.
 - [Markdown All in One](https://github.com/yzhang-gh/vscode-markdown): All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more).
@@ -23,10 +23,22 @@
 - [Task Runner](https://github.com/sana-ajani/taskrunner-code): Extension to view and run tasks from Explorer pane.
 
 
-### Not installed
+
+## Disabled
+
+- [Auto Close Tag](https://github.com/formulahendry/vscode-auto-close-tag): Automatically add HTML/XML close tag.
+- [Code Runner](https://github.com/formulahendry/vscode-code-runner): Run code snippet or code file for multiple languages.
+
+
+
+## Not installed
 
 - [Angular 7 Snippets](https://github.com/BeastCode/VSCode-Angular-TypeScript-Snippets): Angular Snippets (TypeScript, Html, Angular Material, Flex Layout, ngRx, RxJS, PWA & Testing).
 - [Conflict Squeezer](https://github.com/angelo-mollame/conflict-squeezer): Simplifies the resolution of Git merge conflicts through the editor.
+- [CSS Peek](https://github.com/pranaygp/vscode-css-peek): A vscode extension for peeking at CSS definitions from a class or id tag in HTML.
+- [VS Code ES7 React/Redux/React-Native/JS snippets](https://github.com/dsznajder/vscode-es7-javascript-react-snippets): This extension provides you JavaScript and React/Redux snippets in ES7 with Babel plugin features.
+- [Live Server](https://github.com/ritwickdey/vscode-live-server): Launch a development local Server with live reload feature for static & dynamic pages.
 - [Markdown Preview Enhanced](https://github.com/shd101wyy/vscode-markdown-preview-enhanced) is an extension that provides you with many useful functionalities such as automatic scroll sync, math typesetting, mermaid, PlantUML, pandoc, PDF export, code chunk, presentation writer, etc.
+- [Prettier Now](https://github.com/remimarsal/prettier-now-vscode): Code Formatter for Visual Studio Code with Prettier Miscellaneous.
 - [React Native Tools](https://github.com/Microsoft/vscode-react-native): Code-hinting, debugging and integrated commands for React Native.
 - [sftp](https://github.com/liximomo/vscode-sftp): Super fast sftp/ftp extension for VS Code.

@@ -75,9 +75,10 @@ alias cfstatus='coldfusion status'
 # ---------------------------------------------------------------------
 # Docker
 # ---------------------------------------------------------------------
-alias dockstart='docker start coldfusion mssql-server'
-alias dockstop='docker stop coldfusion mssql-server'
-alias dcfrestart='docker restart coldfusion'
+alias dockstart='docker start cfelastic mssql-server'
+alias dockstop='docker stop cfelastic mssql-server'
+alias dcfrestart='docker restart cfelastic'
+alias dockcf='docker exec -it cfelastic bash'
 alias docksql='docker exec -it mssql-server bash'
 
 

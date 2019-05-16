@@ -12,6 +12,7 @@ tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
+tap 'jesseduffield/lazygit'
 
 
 
@@ -126,13 +127,10 @@ mas 'Affinity Photo', id: 824183456
 mas 'Better', id: 1121192229
 mas 'Debit & Credit', id: 882637653
 mas 'Diptic', id: 526546615
-mas 'Due', id: 524373870
 mas 'GarageBand', id: 682658836
 mas 'iA Writer', id: 775737590
 mas 'ifolor Designer', id: 446366603
-mas 'Instant', id: 482262245
 mas 'iMovie', id: 408981434
-mas 'iStat Mini', id: 927292435
 mas 'Ka-Block!', id: 1335413823
 mas 'Keynote', id: 409183694
 mas 'Logic Pro X', id: 634148309

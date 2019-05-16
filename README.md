@@ -16,7 +16,7 @@ source install.sh
 ```
 
 
-Install the packages and applications defined in `Brewfile` :
+Install the packages and applications defined in `Brewfile`:
 ```bash
 brew bundle
 ```
