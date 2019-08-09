@@ -11,7 +11,8 @@ Clone the Git repository to your `~/Projects/` folder (will be created if it doe
 
 ```bash
 mkdir -p ~/Projects
-git clone https://github.com/codeyard/dotfiles.git ~/Projects
+git clone https://github.com/codeyard/dotfiles.git ~/Projects/dotfiles
+cd Projects/dotfiles
 source install.sh
 ```
 
