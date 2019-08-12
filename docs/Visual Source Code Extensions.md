@@ -7,9 +7,6 @@
 - [Brewfile](https://marketplace.visualstudio.com/items?itemName=sharat.vscode-brewfile): Syntax Highlighting for Brewfile
 - [CFLint](https://github.com/KamasamaK/vscode-cflint): CFLint (a linter for CFML) for Visual Studio Code.
 - [CFML](https://github.com/KamasamaK/vscode-cfml): CFML language.
-- [compareit](https://github.com/in4margaret/compareit) helps to compare two files wich you can choose from your current project and other directory on your computer or clipboard.
-- [Docker](https://github.com/microsoft/vscode-docker): Adds syntax highlighting, commands, hover tips, and linting for Dockerfile and docker-compose files.
-- [Elasticsearch for VSCode](https://github.com/hsen-dev/vscode-elastic): An extension for developing elasticsearch queries like Kibana console and Sense extention.
 - [ESLint](https://github.com/Microsoft/vscode-eslint): Integrates ESLint JavaScript into VS Code.
 - [GitLens](https://github.com/eamodio/vscode-gitlens): Supercharge the Git capabilities built into Visual Studio Code — Visualize code authorship at a glance via Git blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via powerful comparison commands, and so much more.
 - [Markdown All in One](https://github.com/yzhang-gh/vscode-markdown): All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more).
@@ -28,6 +25,8 @@
 
 - [Auto Close Tag](https://github.com/formulahendry/vscode-auto-close-tag): Automatically add HTML/XML close tag.
 - [Code Runner](https://github.com/formulahendry/vscode-code-runner): Run code snippet or code file for multiple languages.
+- [Docker](https://github.com/microsoft/vscode-docker): Adds syntax highlighting, commands, hover tips, and linting for Dockerfile and docker-compose files.
+- [Elasticsearch for VSCode](https://github.com/hsen-dev/vscode-elastic): An extension for developing elasticsearch queries like Kibana console and Sense extention.
 
 
 

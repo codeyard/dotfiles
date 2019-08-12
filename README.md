@@ -32,13 +32,16 @@ source install_config.sh
 To install [Package Control for Sublime Text](https://packagecontrol.io/installation) you need to copy the appropriate Python code for your version of Sublime Text into the console (`View > Show Console`) .
 
 
-Optionally copy additional files from Dropbox:
+Optionally copy additional files from Projects folder:
 ```bash
 # Copy color palettes to ~/Library/Colors/:
-cp ~/Dropbox/Projects/dotfiles-addons/color-palettes/*.clr ~/Library/Colors/
+cp ~/Projects/dotfiles-addons/color-palettes/*.clr ~/Library/Colors/
 
 # Copy fonts to ~/Library/Fonts/:
-cp ~Dropbox/Projects/dotfiles-addons/fonts/*.otf ~/Library/Fonts/
-cp ~Dropbox/Projects/dotfiles-addons/fonts/*.ttf ~/Library/Fonts/
-cp ~Dropbox/Projects/dotfiles-addons/fonts/*.dfont ~/Library/Fonts/
+cp ~/Projects/dotfiles-addons/fonts/*.otf ~/Library/Fonts/
+cp ~/Projects/dotfiles-addons/fonts/*.ttf ~/Library/Fonts/
+cp ~/Projects/dotfiles-addons/fonts/*.dfont ~/Library/Fonts/
+
+# Copy Sublime Text themes to ~/Library/Colors/:
+cp ~/Projects/dotfiles-addons/sublime-text/*.tmTheme ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 ```

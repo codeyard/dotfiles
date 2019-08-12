@@ -1,22 +1,11 @@
 #!/bin/sh
 
 # ---------------------------------------------------------------------
-# Shell
-# ---------------------------------------------------------------------
-
-# Install Docker Bash Completion
-ln -s /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion /usr/local/etc/bash_completion.d/docker
-ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion /usr/local/etc/bash_completion.d/docker-machine
-ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion /usr/local/etc/bash_completion.d/docker-compose
-
-
-
-# ---------------------------------------------------------------------
 # Sublime Text
 # ---------------------------------------------------------------------
 # Create needed directories
 cd ~/Library/Application\ Support
-mkdir 'Sublime Text 3'
+mkdir -p 'Sublime Text 3'
 cd Sublime\ Text\ 3
 mkdir -p 'Installed Packages'
 mkdir -p 'Packages'
@@ -72,4 +61,10 @@ ln -sf ~/Projects/dotfiles/apps/visual-studio-code/User/*.json ~/Library/Applica
 # Xcode
 # ---------------------------------------------------------------------
 # Copy Themes
+cd ~/Library/Developer
+mkdir -p 'Xcode'
+cd Xcode
+mkdir -p 'UserData'
+cd UserData
+mkdir -p 'FontAndColorThemes'
 cp ~/Projects/dotfiles/apps/xcode/*.xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/

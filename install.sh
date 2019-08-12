@@ -79,5 +79,5 @@ echo -e "\033[0;33mShell configured.\033[0m"
 # ---------------------------------------------------------------------
 
 # Create a Sites directory
-# This is a default directory for macOS user accounts but doesn't comes pre-installed
-mkdir $HOME/Sites
+# This is a default directory for macOS user accounts but doesn't come pre-installed
+mkdir -p $HOME/Sites

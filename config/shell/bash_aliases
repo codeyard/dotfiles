@@ -9,13 +9,13 @@ alias desktop='cd ~/Desktop'
 alias documents='cd ~/Documents'
 alias dotfiles='cd ~/Projects/dotfiles'
 alias downloads='cd ~/Downloads'
-alias dropbox='cd ~/Dropbox'
 alias home='cd ~'
 alias library='cd ~/Library'
-alias notes='cd ~/Dropbox/Notes'
+alias notes='cd ~/OneDrive/Notes'
+alias onedrive='cd ~/OneDrive'
 alias projects='cd ~/Projects'
 alias sites='cd ~/Sites'
-alias transfer='cd ~/Dropbox/Transfer'
+alias transfer='cd ~/OneDrive/Transfer'
 alias undelivr='cd /Applications/ColdFusion10/cfusion/Mail/Undelivr'
 
 # Projects
@@ -75,11 +75,11 @@ alias cfstatus='coldfusion status'
 # ---------------------------------------------------------------------
 # Docker
 # ---------------------------------------------------------------------
-alias dockstart='docker start cfelastic mssql-server'
-alias dockstop='docker stop cfelastic mssql-server'
+alias dockstart='docker start cfelastic mssql'
+alias dockstop='docker stop cfelastic mssql'
 alias dcfrestart='docker restart cfelastic'
 alias dockcf='docker exec -it cfelastic bash'
-alias docksql='docker exec -it mssql-server bash'
+alias docksql='docker exec -it mssql bash'
 
 
 
