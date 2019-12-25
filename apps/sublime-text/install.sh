@@ -3,6 +3,7 @@
 # ---------------------------------------------------------------------
 # Sublime Text
 # ---------------------------------------------------------------------
+
 # Create needed directories
 cd ~/Library/Application\ Support
 mkdir -p 'Sublime Text 3'
@@ -39,32 +40,3 @@ ln -sf ~/Projects/dotfiles/apps/sublime-text/User/*.palettes ~/Library/Applicati
 
 # Use Sublime Text as the editor for many commands that prompt for input
 export EDITOR='subl -w'
-
-
-
-# ---------------------------------------------------------------------
-# Visual Source Code
-# ---------------------------------------------------------------------
-# Create needed directories
-cd ~/Library/Application\ Support
-mkdir -p Code/User/snippets
-
-# Symlink all Snippets
-ln -sf ~/Projects/dotfiles/apps/visual-studio-code/User/snippets/* ~/Library/Application\ Support/Code/User/snippets
-
-# Symlink all config files
-ln -sf ~/Projects/dotfiles/apps/visual-studio-code/User/*.json ~/Library/Application\ Support/Code/User/
-
-
-
-# ---------------------------------------------------------------------
-# Xcode
-# ---------------------------------------------------------------------
-# Copy Themes
-cd ~/Library/Developer
-mkdir -p 'Xcode'
-cd Xcode
-mkdir -p 'UserData'
-cd UserData
-mkdir -p 'FontAndColorThemes'
-cp ~/Projects/dotfiles/apps/xcode/*.xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/

@@ -17,7 +17,6 @@
         }
     ],
     "workbench.statusBar.feedback.visible": false,
-    "workbench.colorTheme": "One Dark Pro",
     "auto-close-tag.excludedTags": [
         "area",
         "base",
@@ -133,5 +132,19 @@
     "browser-preview.startUrl": "about:blank",
     "cfml.hover.enable": false,
     "workbench.iconTheme": "material-icon-theme",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "cfml.autoCloseTags.enable": false,
+    "prettier.tabWidth": 3,
+    "prettier.quoteProps": "preserve",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.codeLens.enabled": false,
+    "npm.fetchOnlinePackageInfo": false
 }

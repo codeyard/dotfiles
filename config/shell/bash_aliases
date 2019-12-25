@@ -16,15 +16,14 @@ alias onedrive='cd ~/OneDrive'
 alias projects='cd ~/Projects'
 alias sites='cd ~/Sites'
 alias transfer='cd ~/OneDrive/Transfer'
-alias undelivr='cd /Applications/ColdFusion10/cfusion/Mail/Undelivr'
 
 # Projects
 alias codeyard='cd ~/Projects/codeyard'
-alias wogdb='cd ~/Projects/wog-database'
-alias wogfiles='cd ~/Projects/wog-files'
-alias wogipad='cd ~/Projects/wog-ipad'
-alias wogiphone='cd ~/Projects/wog-iphone'
-alias wogv3='cd ~/Projects/wog-v3'
+alias wogdb='cd ~/Projects/WoG/wog-database'
+alias wogfiles='cd ~/Projects/WoG/wog-files'
+alias wogipad='cd ~/Projects/WoG/wog-ipad'
+alias wogiphone='cd ~/Projects/WoG/wog-iphone'
+alias wogv3='cd ~/Projects/WoG/wog-v3'
 
 # Download
 alias bandcamp-dl='youtube-dl --output "~/Downloads/Mp3/%(title)s.%(ext)s"'
@@ -42,13 +41,13 @@ alias youtube-mp4='youtube-dl --output "~/Downloads/TV Shows/%(title)s.%(ext)s" 
 alias apaopen='open /etc/apache2'
 
 # Edit Apache Configuration
-alias apaconf='subl /private/etc/apache2/httpd.conf'
+alias apaconf='code /private/etc/apache2/httpd.conf'
 
 # Edit Apache Virtual Hosts
-alias apahosts='subl /private/etc/apache2/extra/httpd-vhosts.conf'
+alias apahosts='code /private/etc/apache2/extra/httpd-vhosts.conf'
 
 # Open Apache Error Log
-alias apalog='subl /private/var/log/apache2/error_log'
+alias apalog='code /private/var/log/apache2/error_log'
 
 # Start, Stop, Restart Apache
 alias aparestart='sudo apachectl restart'
@@ -57,17 +56,6 @@ alias apastart='sudo apachectl start'
 
 # Test Apache Syntax
 alias apatest='sudo apachectl -t'
-
-
-
-
-# ---------------------------------------------------------------------
-# ColdFusion
-# ---------------------------------------------------------------------
-alias cfstart='coldfusion start' # /Applications/ColdFusion10/cfusion/bin/coldfusion start
-alias cfstop='coldfusion stop' # /Applications/ColdFusion10/cfusion/bin/coldfusion stop
-alias cfrestart='coldfusion restart' # /Applications/ColdFusion10/cfusion/bin/coldfusion restart
-alias cfstatus='coldfusion status'
 
 
 
@@ -85,51 +73,14 @@ alias docksql='docker exec -it mssql bash'
 
 
 # ---------------------------------------------------------------------
-# Elasticsearch
-# ---------------------------------------------------------------------
-#alias elastart='brew services start homebrew/versions/elasticsearch17'
-#alias elastop='brew services stop homebrew/versions/elasticsearch17'
-alias elastart='elasticsearch -d'
-alias elastop="curl -XPOST 'http://127.0.0.1:9200/_shutdown'"
-
-alias elatest="curl 'http://127.0.0.1:9200/?pretty'"
-
-# Edit Elasticsearch Config File
-alias elaconf='subl /usr/local/Cellar/elasticsearch17/1.7.5/config/elasticsearch.yml'
-
-# Go to Elasticsearch Data Storage
-alias eladata='cd /usr/local/var/elasticsearch/'
-
-# Go to Elasticsearch Log Files
-alias elalog='cd /usr/local/var/log/elasticsearch/'
-
-# Go to Elasticsearch Plugins Folder
-alias elaplugins='cd /usr/local/var/lib/elasticsearch/plugins/'
-
-# Install Plugins
-alias elapluginstall='/usr/local/Cellar/elasticsearch17/1.7.5/bin/plugin install'
-
-
-
-
-# ---------------------------------------------------------------------
 # Hosts
 # ---------------------------------------------------------------------
 
 # Edit Hosts File
-alias hhosts='subl /etc/hosts'
+alias hhosts='code /etc/hosts'
 
 # Flush Hosts File Cache
 alias flushhosts='dscacheutil -flushcache'
-
-
-
-
-# ---------------------------------------------------------------------
-# Jekyll
-# ---------------------------------------------------------------------
-alias jekbuild='jekyll build'
-alias jekwatch='jekyll build -w'
 
 
 

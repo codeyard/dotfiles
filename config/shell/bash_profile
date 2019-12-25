@@ -144,8 +144,8 @@ PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # Brew Cask: Set Path where the symlinks to the applications will be generated
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# Set Default Editor to Sublime Text
-export EDITOR='subl -w'
+# Set Default Editor to Visual Studio Code
+export EDITOR='code -w'
 alias edit="$EDITOR"
 
 # Prefer US English and use UTF-8

@@ -23,14 +23,28 @@ brew bundle
 ```
 
 
-Now run `install_config.sh` to copy/symlink settings, snippets and themes to Sublime Text, Visual Source Code, and Xcode.
-```bash
-source install_config.sh
-```
 
+### Visual Studio Code
+
+Run `source apps/visual-studio-code/install.sh` to symlink the settings and snippets.
+
+
+
+### Xcode
+
+Copy Themes by running `source apps/xcode/install.sh`
+
+
+
+### Sublime Text
 
 To install [Package Control for Sublime Text](https://packagecontrol.io/installation) you need to copy the appropriate Python code for your version of Sublime Text into the console (`View > Show Console`) .
 
+Then run `source apps/sublime-text/install.sh` to copy/symlink settings, snippets and themes.
+
+
+
+### Additional files
 
 Optionally copy additional files from Projects folder:
 ```bash

@@ -12,12 +12,12 @@
 - [Markdown All in One](https://github.com/yzhang-gh/vscode-markdown): All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more).
 - [Material Icon Theme](https://github.com/PKief/vscode-material-icon-theme) provides lots of icons based on Material Design.
 - [One Dark Pro](https://github.com/Binaryify/OneDark-Pro): Atom's iconic One Dark theme.
+- [Prettier](https://github.com/prettier/prettier-vscode) is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
 - [Project Manager](https://github.com/alefragnani/vscode-project-manager) helps you to easily access your projects, no matter where they are located.
 - [REST Client](https://github.com/Huachao/vscode-restclient) allows you to send HTTP request and view the response in Visual Studio Code directly.
 - [SQL Server](https://github.com/Microsoft/vscode-mssql): Develop Microsoft SQL Server, Azure SQL Database and SQL Data Warehouse everywhere.
 - [stylelint](https://github.com/shinnn/vscode-stylelint): Modern CSS/SCSS/Less linter.
 - [Sublime Text Keymap and Settings Importer](https://github.com/Microsoft/vscode-sublime-keybindings): This extension imports keybindings and settings from Sublime Text to VS Code.
-- [Task Runner](https://github.com/sana-ajani/taskrunner-code): Extension to view and run tasks from Explorer pane.
 
 
 
@@ -41,3 +41,4 @@
 - [Prettier Now](https://github.com/remimarsal/prettier-now-vscode): Code Formatter for Visual Studio Code with Prettier Miscellaneous.
 - [React Native Tools](https://github.com/Microsoft/vscode-react-native): Code-hinting, debugging and integrated commands for React Native.
 - [sftp](https://github.com/liximomo/vscode-sftp): Super fast sftp/ftp extension for VS Code.
+- [Task Explorer](https://github.com/spmeesseman/vscode-taskexplorer): Run and Manage Tasks for Visual Studio Code.

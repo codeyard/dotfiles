@@ -1,9 +1,6 @@
 # Brewfile Personal
 # https://github.com/Homebrew/homebrew-bundle
 
-update
-upgrade
-
 # Specify a directory to install
 cask_args appdir: '/Applications'
 
@@ -31,65 +28,58 @@ brew 'node' # Node (https://nodejs.org)
 brew 'speedtest_cli'
 brew 'tree'
 brew 'youtube-dl'
+brew 'zsh'
+brew 'zsh-completions'
 
 
 
 # ---------------------------------------------------------------------
 # Apps
 # ---------------------------------------------------------------------
+cask 'arq'
 cask '1password'
-cask 'a-better-finder-rename'
 cask 'alfred'
 cask 'appdelete'
 cask 'applepi-baker'
 cask 'audio-hijack'
 cask 'bartender'
-cask 'boxer'
 cask 'calibre'
 cask 'colorpicker-skalacolor'
-cask 'couleurs'
 cask 'coteditor'
+cask 'couleurs'
 cask 'dash'
 cask 'default-folder-x'
 cask 'docker'
-cask 'dropbox'
+cask 'epic-games'
 cask 'firefox'
 cask 'fission'
-cask 'flux'
 cask 'fs-uae'
 cask 'google-chrome'
 cask 'handbrake'
-cask 'iconjar'
+cask 'iina'
 cask 'imageoptim'
 cask 'intellij-idea-ce'
 cask 'itsycal'
 cask 'ivolume'
-cask 'jadengeller-helium'
-cask 'kitematic'
-cask 'logmein-client'
 cask 'macmediakeyforwarder' # Mac Media Key Forwarder (https://github.com/milgra/macmediakeyforwarder)
-cask 'marked'
 cask 'metaz'
 cask 'nordvpn'
+cask 'onedrive'
 cask 'openemu'
 cask 'path-finder'
 cask 'scummvm'
 cask 'sdformatter'
-cask 'slack'
 cask 'sketch'
-cask 'skype'
 cask 'sourcetree'
 cask 'spotify'
 cask 'spotmenu'
-cask 'sublime-text'
+#cask 'sublime-text'
 cask 'tor-browser'
 cask 'transmission'
 cask 'transmit'
 cask 'virtualbox'
 cask 'visual-studio-code'
-cask 'vlc'
 cask 'vuescan'
-cask 'wwdc'
 
 
 
@@ -144,19 +134,11 @@ mas 'Pixave', id: 924891282
 mas 'Pixelmator Pro', id: 1289583905
 mas 'Polarr Photo Editor Pro', id: 1058273036
 mas 'Priime Styles', id: 1089627601
-mas 'Reeder', id: 880001334
+#mas 'Reeder', id: 880001334
 mas 'SnapNDrag Pro', id: 430397512
 mas 'SQLPro for MSSQL', id: 828466809
 mas 'Tagr', id: 903733783
 mas 'Things3', id: 904280696
 mas 'Tweetbot', id: 1384080005
+mas 'Xcode', id: 497799835
 mas 'xScope', id: 889428659
-
-
-
-# ---------------------------------------------------------------------
-# Cleanup
-# ---------------------------------------------------------------------
-cask alfred link
-cleanup
-cask cleanup
