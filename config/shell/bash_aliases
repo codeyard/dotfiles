@@ -28,7 +28,7 @@ alias wogv3='cd ~/Projects/WoG/wog-v3'
 # Download
 alias bandcamp-dl='youtube-dl --output "~/Downloads/Mp3/%(title)s.%(ext)s"'
 alias youtube-mp3='youtube-dl --output "~/Downloads/Mp3/%(title)s.%(ext)s" --extract-audio --audio-format mp3'
-alias youtube-mp4='youtube-dl --output "~/Downloads/TV Shows/%(title)s.%(ext)s" --format mp4'
+alias youtube-mp4='youtube-dl --output "~/Downloads/%(title)s.%(ext)s" --format mp4'
 
 
 

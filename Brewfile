@@ -69,6 +69,7 @@ cask 'openemu'
 cask 'path-finder'
 cask 'scummvm'
 cask 'sdformatter'
+cask 'sf-symbols'
 cask 'sketch'
 cask 'sourcetree'
 cask 'spotify'
@@ -79,7 +80,7 @@ cask 'transmission'
 cask 'transmit'
 cask 'virtualbox'
 cask 'visual-studio-code'
-cask 'vuescan'
+#cask 'vuescan'
 
 
 
@@ -101,8 +102,6 @@ cask 'font-source-sans-pro'
 # Quicklook
 # ---------------------------------------------------------------------
 cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'qlstephen'
 cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'suspicious-package'
@@ -132,9 +131,10 @@ mas 'Paprika Recipe Manager 3', id: 1303222628
 mas 'PDFify', id: 1435055351
 mas 'Pixave', id: 924891282
 mas 'Pixelmator Pro', id: 1289583905
+mas 'Playgrounds', id: 1496833156
 mas 'Polarr Photo Editor Pro', id: 1058273036
 mas 'Priime Styles', id: 1089627601
-#mas 'Reeder', id: 880001334
+mas 'Reeder', id: 1449412482
 mas 'SnapNDrag Pro', id: 430397512
 mas 'SQLPro for MSSQL', id: 828466809
 mas 'Tagr', id: 903733783

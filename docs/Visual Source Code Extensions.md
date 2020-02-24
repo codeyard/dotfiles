@@ -33,6 +33,7 @@
 ## Not installed
 
 - [Angular 7 Snippets](https://github.com/BeastCode/VSCode-Angular-TypeScript-Snippets): Angular Snippets (TypeScript, Html, Angular Material, Flex Layout, ngRx, RxJS, PWA & Testing).
+- [Better Comments](https://github.com/aaron-bond/better-comments): The Better Comments extension will help you create more human-friendly comments in your code.
 - [Conflict Squeezer](https://github.com/angelo-mollame/conflict-squeezer): Simplifies the resolution of Git merge conflicts through the editor.
 - [CSS Peek](https://github.com/pranaygp/vscode-css-peek): A vscode extension for peeking at CSS definitions from a class or id tag in HTML.
 - [VS Code ES7 React/Redux/React-Native/JS snippets](https://github.com/dsznajder/vscode-es7-javascript-react-snippets): This extension provides you JavaScript and React/Redux snippets in ES7 with Babel plugin features.
@@ -40,5 +41,6 @@
 - [Markdown Preview Enhanced](https://github.com/shd101wyy/vscode-markdown-preview-enhanced) is an extension that provides you with many useful functionalities such as automatic scroll sync, math typesetting, mermaid, PlantUML, pandoc, PDF export, code chunk, presentation writer, etc.
 - [Prettier Now](https://github.com/remimarsal/prettier-now-vscode): Code Formatter for Visual Studio Code with Prettier Miscellaneous.
 - [React Native Tools](https://github.com/Microsoft/vscode-react-native): Code-hinting, debugging and integrated commands for React Native.
+- [**Settings Sync**](https://github.com/shanalikhan/code-settings-sync): Synchronize your Visual Studio Code Settings Across Multiple Machines using GitHub GIST
 - [sftp](https://github.com/liximomo/vscode-sftp): Super fast sftp/ftp extension for VS Code.
 - [Task Explorer](https://github.com/spmeesseman/vscode-taskexplorer): Run and Manage Tasks for Visual Studio Code.

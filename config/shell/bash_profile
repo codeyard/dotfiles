@@ -165,3 +165,6 @@ shopt -s lithist                 # save multi-line commands with newlines
 shopt -s cmdhist                 # save multi-line commands in a single hist entry
 shopt -s cdable_vars             # if cd arg is not a dir, assume it is a var
 shopt -s no_empty_cmd_completion # don't try to complete empty cmds
+
+
+export PATH="/usr/local/sbin:$PATH"
