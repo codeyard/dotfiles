@@ -5,11 +5,7 @@
 cask_args appdir: '/Applications'
 
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'jesseduffield/lazygit'
+tap 'cask-fonts'
 
 
 

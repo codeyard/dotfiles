@@ -16,7 +16,7 @@
 - [Project Manager](https://github.com/alefragnani/vscode-project-manager) helps you to easily access your projects, no matter where they are located.
 - [REST Client](https://github.com/Huachao/vscode-restclient) allows you to send HTTP request and view the response in Visual Studio Code directly.
 - [SQL Server](https://github.com/Microsoft/vscode-mssql): Develop Microsoft SQL Server, Azure SQL Database and SQL Data Warehouse everywhere.
-- [stylelint](https://github.com/shinnn/vscode-stylelint): Modern CSS/SCSS/Less linter.
+- [stylelint](https://github.com/stylelint/vscode-stylelint): A Visual Studio Code extension to lint CSS/SCSS/Less with stylelint.
 - [Sublime Text Keymap and Settings Importer](https://github.com/Microsoft/vscode-sublime-keybindings): This extension imports keybindings and settings from Sublime Text to VS Code.
 
 
