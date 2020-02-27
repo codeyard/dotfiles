@@ -5,7 +5,7 @@
 cask_args appdir: '/Applications'
 
 # Taps
-tap 'cask-fonts'
+tap 'homebrew/cask-fonts'
 
 
 
@@ -44,7 +44,6 @@ cask 'colorpicker-skalacolor'
 cask 'coteditor'
 cask 'couleurs'
 cask 'dash'
-cask 'default-folder-x'
 cask 'docker'
 cask 'epic-games'
 cask 'firefox'
@@ -83,7 +82,7 @@ cask 'visual-studio-code'
 # ---------------------------------------------------------------------
 # Fonts
 # ---------------------------------------------------------------------
-cask 'font-courier-prime '
+cask 'font-courier-prime'
 cask 'font-courier-prime-code'
 cask 'font-courier-prime-sans'
 cask 'font-fira-code'

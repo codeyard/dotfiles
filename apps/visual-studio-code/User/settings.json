@@ -146,5 +146,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "gitlens.codeLens.enabled": false,
-    "npm.fetchOnlinePackageInfo": false
+    "npm.fetchOnlinePackageInfo": false,
+    "git.suggestSmartCommit": false
 }
