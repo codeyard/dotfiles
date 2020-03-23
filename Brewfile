@@ -12,6 +12,7 @@ tap 'homebrew/cask-fonts'
 # ---------------------------------------------------------------------
 # Binaries
 # ---------------------------------------------------------------------
+brew 'angular-cli'
 brew 'bash'
 brew 'bash-completion'
 brew 'diff-so-fancy' # diff-so-fancy (https://github.com/so-fancy/diff-so-fancy/)
@@ -20,6 +21,7 @@ brew 'glances' # Glances (https://nicolargo.github.io/glances/)
 brew 'hub' # Hub (https://github.com/github/hub)
 brew 'lazygit' # lazygit (https://github.com/jesseduffield/lazygit)
 brew 'mas' # mas-cli (https://github.com/mas-cli/mas)
+brew 'maven'
 brew 'node' # Node (https://nodejs.org)
 brew 'speedtest_cli'
 brew 'tree'
@@ -32,11 +34,11 @@ brew 'zsh-completions'
 # ---------------------------------------------------------------------
 # Apps
 # ---------------------------------------------------------------------
-cask 'arq'
 cask '1password'
 cask 'alfred'
 cask 'appdelete'
 cask 'applepi-baker'
+cask 'arq'
 cask 'audio-hijack'
 cask 'bartender'
 cask 'calibre'
@@ -58,6 +60,7 @@ cask 'itsycal'
 cask 'ivolume'
 cask 'macmediakeyforwarder' # Mac Media Key Forwarder (https://github.com/milgra/macmediakeyforwarder)
 cask 'metaz'
+cask 'mongodb-compass'
 cask 'nordvpn'
 cask 'onedrive'
 cask 'openemu'
@@ -69,13 +72,11 @@ cask 'sketch'
 cask 'sourcetree'
 cask 'spotify'
 cask 'spotmenu'
-#cask 'sublime-text'
 cask 'tor-browser'
 cask 'transmission'
 cask 'transmit'
 cask 'virtualbox'
 cask 'visual-studio-code'
-#cask 'vuescan'
 
 
 

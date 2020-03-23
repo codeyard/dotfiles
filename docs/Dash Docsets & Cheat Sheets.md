@@ -5,18 +5,21 @@
 - Angular
 - Apache HTTP Server
 - Apple API Reference
+- Bash
 - ColdFusion 10
 - CSS
 - Docker
 - ElasticSearch
+- Groovy
 - HTML
 - Java SE11
 - JavaScript
 - Man Pages
 - Markdown
+- MongoDB
 - NodeJS
-- React
 - Sass
+- Spring Framework
 - TypeScript
 
 
@@ -30,6 +33,7 @@
 - HTML Entities
 - HTML Header Fields
 - HTML Status Codes
+- IntelliJ Shortcuts
 - iOS Design
 - Mac Startup Keys
 - npm
@@ -45,14 +49,9 @@
 
 ## Not Installed
 
-- Go
 - Gulp
-- Ionic
 - Jekyll
-- Liquid
-- Lua
 - Python 3
-- Ruby 2
-- SQLite
+- React
 - VueJS
 - YAML
