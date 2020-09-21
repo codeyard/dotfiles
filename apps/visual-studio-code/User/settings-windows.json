@@ -1,0 +1,19 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.wordWrap": "on",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "gitlens.advanced.telemetry.enabled": false,
+    "rest-client.enableTelemetry": false,
+    "gitlens.currentLine.enabled": false,
+    "prettier.tabWidth": 4,
+    "gitlens.codeLens.enabled": false,
+    "git.suggestSmartCommit": false,
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Hack, Consolas, 'Courier New', monospace",
+    "editor.renderLineHighlight": "all"
+}

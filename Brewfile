@@ -38,7 +38,6 @@ cask '1password'
 cask 'alfred'
 cask 'appdelete'
 cask 'applepi-baker'
-cask 'arq'
 cask 'audio-hijack'
 cask 'bartender'
 cask 'calibre'
@@ -50,24 +49,26 @@ cask 'docker'
 cask 'epic-games'
 cask 'firefox'
 cask 'fission'
-cask 'fs-uae'
 cask 'google-chrome'
 cask 'handbrake'
 cask 'iina'
 cask 'imageoptim'
-cask 'intellij-idea-ce'
+cask 'intellij-idea'
 cask 'itsycal'
 cask 'ivolume'
 cask 'macmediakeyforwarder' # Mac Media Key Forwarder (https://github.com/milgra/macmediakeyforwarder)
 cask 'metaz'
-cask 'mongodb-compass'
-cask 'nordvpn'
+cask 'microsoft-excel'
+cask 'microsoft-teams'
+cask 'microsoft-word'
+#cask 'mongodb-compass'
 cask 'onedrive'
 cask 'openemu'
 cask 'path-finder'
+cask 'postman'
+cask 'responsively'
 cask 'scummvm'
 cask 'sdformatter'
-cask 'sf-symbols'
 cask 'sketch'
 cask 'sourcetree'
 cask 'spotify'
@@ -95,16 +96,6 @@ cask 'font-source-sans-pro'
 
 
 # ---------------------------------------------------------------------
-# Quicklook
-# ---------------------------------------------------------------------
-cask 'qlcolorcode'
-cask 'quicklook-csv'
-cask 'quicklook-json'
-cask 'suspicious-package'
-
-
-
-# ---------------------------------------------------------------------
 # Mac App Store
 # ---------------------------------------------------------------------
 mas 'Affinity Designer', id: 824171161
@@ -112,7 +103,10 @@ mas 'Affinity Photo', id: 824183456
 mas 'Better', id: 1121192229
 mas 'Debit & Credit', id: 882637653
 mas 'Diptic', id: 526546615
+mas 'Due', id: 524373870
 mas 'GarageBand', id: 682658836
+mas 'Glance', id: 1513574319
+mas 'GoodNotes', id: 1444383602
 mas 'iA Writer', id: 775737590
 mas 'ifolor Designer', id: 446366603
 mas 'iMovie', id: 408981434
@@ -124,17 +118,15 @@ mas 'Numbers', id: 409203825
 mas 'Moom', id: 419330170
 mas 'Pages', id: 409201541
 mas 'Paprika Recipe Manager 3', id: 1303222628
-mas 'PDFify', id: 1435055351
 mas 'Pixave', id: 924891282
 mas 'Pixelmator Pro', id: 1289583905
-mas 'Playgrounds', id: 1496833156
 mas 'Polarr Photo Editor Pro', id: 1058273036
 mas 'Priime Styles', id: 1089627601
 mas 'Reeder', id: 1449412482
 mas 'SnapNDrag Pro', id: 430397512
-mas 'SQLPro for MSSQL', id: 828466809
+#mas 'SQLPro for MSSQL', id: 828466809
 mas 'Tagr', id: 903733783
-mas 'Things3', id: 904280696
+mas 'Things', id: 904280696
 mas 'Tweetbot', id: 1384080005
 mas 'Xcode', id: 497799835
 mas 'xScope', id: 889428659

@@ -111,7 +111,6 @@
     "editor.selectionHighlight": true,
     "window.openFilesInNewWindow": "off",
     "editor.scrollBeyondLastLine": true,
-    "editor.tabSize": 3,
     "files.trimTrailingWhitespace": true,
     "editor.wordWrap": "on",
     "editor.formatOnPaste": true,
@@ -134,7 +133,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "git.autofetch": true,
     "cfml.autoCloseTags.enable": false,
-    "prettier.tabWidth": 3,
+    "prettier.tabWidth": 4,
     "prettier.quoteProps": "preserve",
     "[markdown]": {
         "editor.defaultFormatter": "yzhang.markdown-all-in-one"
@@ -147,5 +146,27 @@
     },
     "gitlens.codeLens.enabled": false,
     "npm.fetchOnlinePackageInfo": false,
-    "git.suggestSmartCommit": false
+    "git.suggestSmartCommit": false,
+    "auto-close-tag.activationOnLanguage": [
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "jinja",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "plaintext",
+        "markdown",
+        "vue",
+        "liquid",
+        "erb",
+        "lang-cfml",
+        "HTML (Eex)"
+    ],
+    "workbench.startupEditor": "newUntitledFile",
+    "telemetry.enableCrashReporter": false,
+    "rest-client.enableTelemetry": false,
+    "editor.renderLineHighlight": "all"
 }
