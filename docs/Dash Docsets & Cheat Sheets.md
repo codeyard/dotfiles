@@ -9,15 +9,12 @@
 - ColdFusion 10
 - CSS
 - Docker
-- ElasticSearch
-- Groovy
 - HTML
 - Java SE11
 - JavaScript
 - Man Pages
 - Markdown
 - MongoDB
-- NodeJS
 - Sass
 - Spring Framework
 - TypeScript
@@ -49,8 +46,15 @@
 
 ## Not Installed
 
+- ElasticSearch
+- Emmet
+- Font Awesome
+- Groovy
 - Gulp
 - Jekyll
+- jQuery
+- MySQL
+- NodeJS
 - Python 3
 - React
 - VueJS

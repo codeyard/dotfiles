@@ -1,5 +1,5 @@
 # Brewfile Personal
-# https://github.com/Homebrew/homebrew-bundle
+# https://github.com/Homebrew/homebrew-bundle
 
 # Specify a directory to install
 cask_args appdir: '/Applications'
@@ -22,8 +22,10 @@ brew 'hub' # Hub (https://github.com/github/hub)
 brew 'lazygit' # lazygit (https://github.com/jesseduffield/lazygit)
 brew 'mas' # mas-cli (https://github.com/mas-cli/mas)
 brew 'maven'
+#brew 'mysql'
 brew 'node' # Node (https://nodejs.org)
 brew 'speedtest_cli'
+#brew 'tomcat@9'
 brew 'tree'
 brew 'youtube-dl'
 brew 'zsh'
@@ -36,43 +38,46 @@ brew 'zsh-completions'
 # ---------------------------------------------------------------------
 cask '1password'
 cask 'alfred'
+cask 'anki'
 cask 'appdelete'
-cask 'applepi-baker'
+#cask 'applepi-baker'
 cask 'audio-hijack'
 cask 'bartender'
+cask 'brave-browser'
 cask 'calibre'
 cask 'colorpicker-skalacolor'
+cask 'corretto'
 cask 'coteditor'
 cask 'couleurs'
 cask 'dash'
+cask 'datagrip'
 cask 'docker'
+cask 'drawio'
 cask 'epic-games'
 cask 'firefox'
 cask 'fission'
-cask 'google-chrome'
 cask 'handbrake'
 cask 'iina'
 cask 'imageoptim'
 cask 'intellij-idea'
 cask 'itsycal'
 cask 'ivolume'
-cask 'macmediakeyforwarder' # Mac Media Key Forwarder (https://github.com/milgra/macmediakeyforwarder)
+cask 'macmediakeyforwarder' # Mac Media Key Forwarder (https://github.com/milgra/macmediakeyforwarder)
 cask 'metaz'
 cask 'microsoft-excel'
+cask 'microsoft-powerpoint'
 cask 'microsoft-teams'
 cask 'microsoft-word'
-#cask 'mongodb-compass'
 cask 'onedrive'
 cask 'openemu'
 cask 'path-finder'
 cask 'postman'
 cask 'responsively'
 cask 'scummvm'
-cask 'sdformatter'
+#cask 'sdformatter'
 cask 'sketch'
 cask 'sourcetree'
 cask 'spotify'
-cask 'spotmenu'
 cask 'tor-browser'
 cask 'transmission'
 cask 'transmit'
@@ -89,7 +94,7 @@ cask 'font-courier-prime-code'
 cask 'font-courier-prime-sans'
 cask 'font-fira-code'
 cask 'font-hack'
-cask 'font-roboto'
+cask 'font-juliamono'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 
@@ -124,9 +129,7 @@ mas 'Polarr Photo Editor Pro', id: 1058273036
 mas 'Priime Styles', id: 1089627601
 mas 'Reeder', id: 1449412482
 mas 'SnapNDrag Pro', id: 430397512
-#mas 'SQLPro for MSSQL', id: 828466809
 mas 'Tagr', id: 903733783
 mas 'Things', id: 904280696
-mas 'Tweetbot', id: 1384080005
 mas 'Xcode', id: 497799835
 mas 'xScope', id: 889428659

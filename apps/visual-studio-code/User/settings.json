@@ -105,7 +105,7 @@
     "editor.showFoldingControls": "mouseover",
     "editor.find.seedSearchStringFromSelection": true,
     "editor.fontFamily": "Hack",
-    "editor.fontSize": 12,
+    "editor.fontSize": 13,
     "editor.lineNumbers": "on",
     "editor.matchBrackets": true,
     "editor.selectionHighlight": true,
@@ -168,5 +168,8 @@
     "workbench.startupEditor": "newUntitledFile",
     "telemetry.enableCrashReporter": false,
     "rest-client.enableTelemetry": false,
-    "editor.renderLineHighlight": "all"
+    "editor.renderLineHighlight": "all",
+    "projectManager.git.baseFolders": [
+        "/Users/raphaelgerber/Projects"
+    ]
 }

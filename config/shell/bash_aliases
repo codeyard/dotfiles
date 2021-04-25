@@ -11,7 +11,6 @@ alias dotfiles='cd ~/Projects/dotfiles'
 alias downloads='cd ~/Downloads'
 alias home='cd ~'
 alias library='cd ~/Library'
-alias notes='cd ~/OneDrive/Notes'
 alias onedrive='cd ~/OneDrive'
 alias projects='cd ~/Projects'
 alias sites='cd ~/Sites'
@@ -19,10 +18,8 @@ alias transfer='cd ~/OneDrive/Transfer'
 
 # Projects
 alias codeyard='cd ~/Projects/codeyard'
-alias wogdb='cd ~/Projects/WoG/wog-database'
-alias wogfiles='cd ~/Projects/WoG/wog-files'
-alias wogipad='cd ~/Projects/WoG/wog-ipad'
-alias wogiphone='cd ~/Projects/WoG/wog-iphone'
+alias cashtml='cd ~/Projects/cas-html5'
+alias cassd='cd ~/Projects/cas-sd'
 alias wogv3='cd ~/Projects/WoG/wog-v3'
 
 # Download
