@@ -22,7 +22,7 @@ cd Projects/dotfiles
 Install [Homebrew](https://brew.sh) and opt out of its analytics:
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
 brew upgrade
 brew analytics off
