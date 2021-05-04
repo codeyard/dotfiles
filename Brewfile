@@ -95,8 +95,6 @@ cask 'font-courier-prime-sans'
 cask 'font-fira-code'
 cask 'font-hack'
 cask 'font-juliamono'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
 
 
 
