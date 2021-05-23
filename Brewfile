@@ -113,19 +113,23 @@ mas 'GoodNotes', id: 1444383602
 mas 'iA Writer', id: 775737590
 mas 'ifolor Designer', id: 446366603
 mas 'iMovie', id: 408981434
+mas 'Hush', id: 1544743900
 mas 'Ka-Block!', id: 1335413823
 mas 'Keynote', id: 409183694
-mas 'Logic Pro X', id: 634148309
+mas 'Logic Pro', id: 634148309
 mas 'Lungo', id: 1263070803
 mas 'Numbers', id: 409203825
+mas 'Microsoft OneNote', id: 784801555
 mas 'Moom', id: 419330170
 mas 'Pages', id: 409201541
 mas 'Paprika Recipe Manager 3', id: 1303222628
+mas 'Pastel', id: 413897608
+mas 'PDFify', id: 1435055351
 mas 'Pixave', id: 924891282
 mas 'Pixelmator Pro', id: 1289583905
 mas 'Polarr Photo Editor Pro', id: 1058273036
 mas 'Priime Styles', id: 1089627601
-mas 'Reeder', id: 1449412482
+mas 'Reeder', id: 1529448980
 mas 'SnapNDrag Pro', id: 430397512
 mas 'Tagr', id: 903733783
 mas 'Things', id: 904280696
