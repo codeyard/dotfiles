@@ -1,0 +1,21 @@
+# ---------------------------------------------------------------------
+# Zsh Command History
+# ---------------------------------------------------------------------
+export HISTSIZE=10000 # Maximum events for internal history
+export SAVEHIST=10000 # Maximum events in history file
+
+
+
+
+# ---------------------------------------------------------------------
+# Settings & Options
+# ---------------------------------------------------------------------
+
+# Brew Cask: Set Path where the symlinks to the applications will be generated
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Set Default Editor to Visual Studio Code
+export EDITOR='code -w'
+alias edit="$EDITOR"
+
+export PATH="/usr/local/sbin:$PATH"

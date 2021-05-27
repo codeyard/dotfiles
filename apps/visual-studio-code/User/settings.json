@@ -169,5 +169,6 @@
     "editor.renderLineHighlight": "all",
     "projectManager.git.baseFolders": [
         "/Users/raphaelgerber/Projects"
-    ]
+    ],
+    "liveServer.settings.CustomBrowser": "firefox"
 }

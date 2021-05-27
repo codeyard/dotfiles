@@ -52,6 +52,30 @@ sudo git config --global color.ui true
 
 
 
+### ZSH Shell
+
+Make ZSH the default shell:
+```
+chsh -s /bin/zsh
+```
+
+Install [Oh My Zsh](https://ohmyz.sh):
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+
+Create Symlinks to ZSH config:
+```
+ln -sf ~/Projects/dotfiles/config/shell/zshrc ~/.zshrc
+ln -sf ~/Projects/dotfiles/config/shell/zshenv ~/.zshenv
+ln -sf ~/Projects/dotfiles/config/shell/oh-my-zsh-aliases ~/.oh-my-zsh/custom/aliases.zsh
+ln -sf ~/Projects/dotfiles/config/shell/editorconfig ~/.editorconfig
+ln -sf ~/Projects/dotfiles/config/shell/inputrc ~/.inputrc
+```
+
+
+
 ### Bash Shell
 
 Make Bash the default shell:

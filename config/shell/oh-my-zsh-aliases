@@ -1,0 +1,237 @@
+# Reload Shell
+alias reload=". ~/.zshrc"
+
+
+# ---------------------------------------------------------------------
+# Path Shortcuts
+# ---------------------------------------------------------------------
+alias appsupport='cd ~/Library/Application\ Support'
+alias apps='cd ~/Applications'
+alias desktop='cd ~/Desktop'
+alias documents='cd ~/Documents'
+alias dotfiles='cd ~/Projects/dotfiles'
+alias downloads='cd ~/Downloads'
+alias home='cd ~'
+alias library='cd ~/Library'
+alias onedrive='cd ~/OneDrive'
+alias projects='cd ~/Projects'
+alias sites='cd ~/Sites'
+alias transfer='cd ~/OneDrive/Transfer'
+
+# Projects
+alias codeyard='cd ~/Projects/codeyard'
+alias cashtml='cd ~/Projects/cas-html5'
+alias cassd='cd ~/Projects/cas-sd'
+alias wogv3='cd ~/Projects/WoG/wog-v3'
+
+# Download
+alias bandcamp-dl='youtube-dl --output "~/Downloads/Mp3/%(title)s.%(ext)s"'
+alias youtube-mp3='youtube-dl --output "~/Downloads/Mp3/%(title)s.%(ext)s" --extract-audio --audio-format mp3'
+alias youtube-mp4='youtube-dl --output "~/Downloads/%(title)s.%(ext)s" --format mp4'
+
+
+
+
+# ---------------------------------------------------------------------
+# Apache
+# ---------------------------------------------------------------------
+
+# Open Apache Folder
+alias apaopen='open /etc/apache2'
+
+# Edit Apache Configuration
+alias apaconf='code /private/etc/apache2/httpd.conf'
+
+# Edit Apache Virtual Hosts
+alias apahosts='code /private/etc/apache2/extra/httpd-vhosts.conf'
+
+# Open Apache Error Log
+alias apalog='code /private/var/log/apache2/error_log'
+
+# Start, Stop, Restart Apache
+alias aparestart='sudo apachectl restart'
+alias apastop='sudo apachectl stop'
+alias apastart='sudo apachectl start'
+
+# Test Apache Syntax
+alias apatest='sudo apachectl -t'
+
+
+
+
+# ---------------------------------------------------------------------
+# Docker
+# ---------------------------------------------------------------------
+alias dockstart='docker start cfelastic mssql'
+alias dockstop='docker stop cfelastic mssql'
+alias dcfrestart='docker restart cfelastic'
+alias dockcf='docker exec -it cfelastic bash'
+alias docksql='docker exec -it mssql bash'
+
+
+
+
+# ---------------------------------------------------------------------
+# Hosts
+# ---------------------------------------------------------------------
+
+# Edit Hosts File
+alias hhosts='code /etc/hosts'
+
+# Flush Hosts File Cache
+alias flushhosts='dscacheutil -flushcache'
+
+
+
+
+# ---------------------------------------------------------------------
+# Abbreviations
+# ---------------------------------------------------------------------
+
+# Directory Browsing
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+
+alias _='sudo'
+alias c='clear'
+alias g='git'
+
+# Get week number
+alias week='date +%V'
+
+
+
+
+# ---------------------------------------------------------------------
+# List & Tree
+# ---------------------------------------------------------------------
+
+# List all in long, ungrouped, human-readable format
+alias la='ls -lhaoG'
+
+# List in long, ungrouped, human-readable format
+alias ll='ls -lhoG'
+
+# List directories instead of contents, and do not  dereference symbolic links
+alias ld='ls -ldo */'
+
+# List only directories & files
+alias l1='ls -1'
+
+# Tree: include hidden files
+alias treea='tree -aC --dirsfirst'
+
+# Tree: list directories only
+alias treed='tree -dC'
+
+# File size
+alias fsize="stat -f \"%z bytes\""
+
+
+
+
+# ---------------------------------------------------------------------
+# Network Utils
+# ---------------------------------------------------------------------
+
+# Get IP Addresses
+alias localip='ipconfig getifaddr en1'
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ and print $1'"
+
+alias myip='curl ipecho.net/plain; echo'
+#alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+
+
+
+# ---------------------------------------------------------------------
+# Mac OS X Utils
+# ---------------------------------------------------------------------
+
+# Activity Monitor
+alias monitor='top -o cpu'
+alias top25='top -o cpu -n 25'
+alias topmem='top -o mem'
+
+# List running processes
+alias processes="command ps -SAcr -o 'uid,pid,ppid,time,rss,command'"
+
+# Mute, Unmute
+alias mute="osascript -e 'set volume output muted true'"
+alias unmute="osascript -e 'set volume output muted false'"
+
+# Disable Startup Chime
+alias nochime="sudo nvram SystemAudioVolume=%01"
+
+# Hide/show all desktop icons (useful when presenting)
+alias showdeskicons='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
+alias hidedeskicons='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
+
+# Launch iOS Simulator
+alias iossim="open -a /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+
+# Lock screen
+alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+
+
+# MAINTENANCE
+
+# Update Homebrew packages
+alias brewupd='brew update; brew upgrade; brew cleanup'
+
+# Update Node packages
+alias npmupd='npm update npm -g; npm update -g'
+
+# Update Homebrew & Node packages
+alias update='brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g'
+
+# Flush Directory Service cache
+alias flush='dscacheutil -flushcache'
+
+# Free up inactive Memory
+alias purge='sudo purge'
+
+# Empty the Trash
+alias emptytrash='rm -rfv ~/.Trash'
+
+# Empty the Trash on all mounted volumes and the main HDD
+# Also, clear Apple’s System Logs to improve shell startup speed
+alias emptyalltrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Enable, Disable Spotlight
+alias spotoff='sudo mdutil -a -i off'
+alias spoton='sudo mdutil -a -i on'
+
+# Hide the Spotlight Menu Icon
+alias spothide='sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search; killall SystemUIServer'
+
+# Remove Double 'Open With' Entries
+alias cleanopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder'
+
+
+
+
+# ---------------------------------------------------------------------
+# Utilities
+# ---------------------------------------------------------------------
+
+# Generate Random Password
+alias randpw='dd if=/dev/urandom bs=1 count=12 2>/dev/null | base64 | rev | cut -b 2- | rev'
+
+# Generate Random Password and copy to clipboard
+alias randpwc='dd if=/dev/urandom bs=1 count=12 2>/dev/null | base64 | rev | cut -b 2- | rev | pbcopy'
+
+# grep with color
+alias grep='grep --color=auto'
+
+# Weather Forecast for Bern
+alias weather='curl http://wttr.in/bern'
