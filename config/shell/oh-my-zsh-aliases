@@ -20,7 +20,9 @@ alias transfer='cd ~/OneDrive/Transfer'
 
 # Projects
 alias codeyard='cd ~/Projects/codeyard'
+alias aligmara='cd ~/Projects/cas-html5/aligmara'
 alias cashtml='cd ~/Projects/cas-html5'
+alias casjmd='cd ~/Projects/cas-jmd'
 alias cassd='cd ~/Projects/cas-sd'
 alias wogv3='cd ~/Projects/WoG/wog-v3'
 
