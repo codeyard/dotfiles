@@ -69,6 +69,7 @@
 [core]
    # Use custom `.gitignore` and `.gitattributes`
 	excludesfile = /Users/raphaelgerber/.gitignore_global
+	autocrlf = input
    #attributesfile = ~/.gitattributes
    #whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 

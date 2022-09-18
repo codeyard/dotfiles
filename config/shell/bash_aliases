@@ -11,17 +11,11 @@ alias dotfiles='cd ~/Projects/dotfiles'
 alias downloads='cd ~/Downloads'
 alias home='cd ~'
 alias library='cd ~/Library'
-alias onedrive='cd ~/OneDrive'
 alias projects='cd ~/Projects'
 alias sites='cd ~/Sites'
-alias transfer='cd ~/OneDrive/Transfer'
 
 # Projects
 alias codeyard='cd ~/Projects/codeyard'
-alias aligmara='cd ~/Projects/cas-html5/aligmara'
-alias cashtml='cd ~/Projects/cas-html5'
-alias casjmd='cd ~/Projects/cas-jmd'
-alias cassd='cd ~/Projects/cas-sd'
 alias wogv3='cd ~/Projects/WoG/wog-v3'
 
 # Download
@@ -75,7 +69,7 @@ alias docksql='docker exec -it mssql bash'
 # Hosts
 # ---------------------------------------------------------------------
 
-# Edit Hosts File
+# Edit Hosts File
 alias hhosts='code /etc/hosts'
 
 # Flush Hosts File Cache
@@ -111,10 +105,10 @@ alias week='date +%V'
 # List & Tree
 # ---------------------------------------------------------------------
 
-# List all in long, ungrouped, human-readable format
+# List all in long, ungrouped, human-readable format
 alias la='ls -lhaoG'
 
-# List in long, ungrouped, human-readable format
+# List in long, ungrouped, human-readable format
 alias ll='ls -lhoG'
 
 # List directories instead of contents, and do not  dereference symbolic links
@@ -126,7 +120,7 @@ alias l1='ls -1'
 # Tree: include hidden files
 alias treea='tree -aC --dirsfirst'
 
-# Tree: list directories only
+# Tree: list directories only
 alias treed='tree -dC'
 
 # File size
@@ -153,12 +147,12 @@ alias myip='curl ipecho.net/plain; echo'
 # Mac OS X Utils
 # ---------------------------------------------------------------------
 
-# Activity Monitor
+# Activity Monitor
 alias monitor='top -o cpu'
 alias top25='top -o cpu -n 25'
 alias topmem='top -o mem'
 
-# List running processes
+# List running processes
 alias processes="command ps -SAcr -o 'uid,pid,ppid,time,rss,command'"
 
 # Mute, Unmute
@@ -194,7 +188,7 @@ alias update='brew update; brew upgrade; brew cleanup; npm update npm -g; npm up
 # Flush Directory Service cache
 alias flush='dscacheutil -flushcache'
 
-# Free up inactive Memory
+# Free up inactive Memory
 alias purge='sudo purge'
 
 # Empty the Trash
@@ -211,7 +205,7 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias spotoff='sudo mdutil -a -i off'
 alias spoton='sudo mdutil -a -i on'
 
-# Hide the Spotlight Menu Icon
+# Hide the Spotlight Menu Icon
 alias spothide='sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search; killall SystemUIServer'
 
 # Remove Double 'Open With' Entries
@@ -224,10 +218,10 @@ alias cleanopenwith='/System/Library/Frameworks/CoreServices.framework/Framework
 # Utilities
 # ---------------------------------------------------------------------
 
-# Generate Random Password
+# Generate Random Password
 alias randpw='dd if=/dev/urandom bs=1 count=12 2>/dev/null | base64 | rev | cut -b 2- | rev'
 
-# Generate Random Password and copy to clipboard
+# Generate Random Password and copy to clipboard
 alias randpwc='dd if=/dev/urandom bs=1 count=12 2>/dev/null | base64 | rev | cut -b 2- | rev | pbcopy'
 
 # grep with color
